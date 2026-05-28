@@ -1,0 +1,44 @@
+---
+title: CGIAR Climate Data Hub — Wikis
+description: Staging and publishing area for partner-facing climate-science reference material from the CGIAR Climate Data Hub community.
+template: splash
+hero:
+  tagline: Reference and knowledge wikis for climate-rationale writers, programme designers, and analysts. Curated by the CGIAR Climate Data Hub community.
+  actions:
+    - text: Browse the AAA Atlas wikis
+      link: /wikis/aaa-atlas/
+      icon: right-arrow
+      variant: primary
+    - text: How to contribute a wiki
+      link: /wikis/contributing/
+      icon: pencil
+      variant: secondary
+    - text: View on GitHub
+      link: https://github.com/CGIAR-Climate-Data-Hub/wikis
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## What you'll find here
+
+These wikis are partner-facing reference material that sits between the technical primary literature and the day-to-day analytic tools CGIAR programmes use. If you're writing a climate rationale for a funding proposal, designing a research-for-development programme, or just need a citable explanation of *why* the Atlas (or another tool) makes certain methodological choices — start here.
+
+<CardGrid>
+  <Card title="AAA Adaptation Atlas" icon="open-book">
+    Reference material for the Africa Agriculture Adaptation Atlas — the Atlas's data choices, methodology, and partner-facing science context.
+
+    [Browse AAA wikis →](/wikis/aaa-atlas/)
+  </Card>
+  <Card title="Contribute" icon="pencil">
+    Each wiki has an "Edit this page" link in the footer (GitHub). National Meteorological Services, regional research centres, and CGIAR partners are welcome to contribute regional perspectives.
+
+    [How to contribute →](/wikis/contributing/)
+  </Card>
+</CardGrid>
+
+## About this site
+
+This is the *staging and testing* repository for wikis that the CGIAR Climate Data Hub team publishes. Authoring happens here in plain Markdown (with optional MDX for richer components); the site is built with [Astro Starlight](https://starlight.astro.build/) and deployed to GitHub Pages on every push to `main`.
+
+Source of truth varies per wiki — some are drafted in their home repository and synced here; others are authored directly here. Each page's `frontmatter` makes the source explicit.
