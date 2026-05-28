@@ -6,7 +6,9 @@ Staging and publishing area for partner-facing knowledge wikis from the CGIAR Cl
 
 ## What this is
 
-This repo hosts reference and methodology wikis — the kind of partner-facing content that sits between the primary scientific literature and the day-to-day analytic tools CGIAR programmes use. The first wiki in the collection is from the AAA Adaptation Atlas, explaining how the Atlas selects climate-model ensembles for African regions. More to follow as partner institutions contribute.
+This repo hosts methodology and reference wikis from the [CGIAR Climate Action Climate Data Hub](https://climate-action.cgiar.org/) — partner-facing content that sits between the primary scientific literature and the day-to-day climate-rationale tools the Data Hub publishes. Each wiki explains *why* a given tool makes the methodological choices it does, written for the national and regional partners who need to defend those choices in proposals, NAPs, and scientific reviews.
+
+The first wiki here grew out of work on the [AAA Adaptation Atlas](https://adaptationatlas.cgiar.org/)'s *Build a Climate Rationale* notebook — specifically, the need to give a defensible answer to *which CMIP6 climate-model ensembles to use for each African region*. More wikis will follow as the Data Hub commissions further reference material and as partner institutions contribute.
 
 Each wiki is plain Markdown with [Astro Starlight](https://starlight.astro.build/) frontmatter. The site is built and deployed to GitHub Pages on every push to `main` via the workflow at `.github/workflows/deploy.yml`.
 
@@ -42,7 +44,7 @@ wikis/
         └── docs/                   one folder per area, one file per wiki
             ├── index.mdx           splash landing page
             ├── contributing.md     contributor guide
-            └── aaa-atlas/          AAA Adaptation Atlas wikis
+            └── aaa-atlas/          AAA Atlas–originated wikis (climate-model selection)
                 ├── index.md
                 ├── african-cmip6-ensembling.md
                 └── figures/

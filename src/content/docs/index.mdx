@@ -1,12 +1,12 @@
 ---
 title: CGIAR Climate Data Hub — Wikis
-description: Staging and publishing area for partner-facing climate-science reference material from the CGIAR Climate Data Hub community.
+description: Methodology and reference wikis from the CGIAR Climate Action Climate Data Hub — partner-facing explanations of the data and choices behind our climate-rationale tools.
 template: splash
 hero:
-  tagline: Reference and knowledge wikis for climate-rationale writers, programme designers, and analysts. Curated by the CGIAR Climate Data Hub community.
+  tagline: Methodology and reference wikis from the CGIAR Climate Action Climate Data Hub. Written so national and regional partners can review, cite, and trust the climate data and choices that sit behind our tools.
   actions:
-    - text: Browse the AAA Atlas wikis
-      link: /wikis/aaa-atlas/
+    - text: Read the climate-models wiki
+      link: /wikis/aaa-atlas/african-cmip6-ensembling/
       icon: right-arrow
       variant: primary
     - text: How to contribute a wiki
@@ -22,23 +22,27 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 
 ## What you'll find here
 
-These wikis are partner-facing reference material that sits between the technical primary literature and the day-to-day analytic tools CGIAR programmes use. If you're writing a climate rationale for a funding proposal, designing a research-for-development programme, or just need a citable explanation of *why* the Atlas (or another tool) makes certain methodological choices — start here.
+These wikis are partner-facing reference material from the [CGIAR Climate Action Climate Data Hub](https://climate-action.cgiar.org/). They sit between the primary scientific literature and the day-to-day tools — explaining *why* the Data Hub's climate-rationale workflows make the choices they make, so that the national meteorological services, regional research centres, and partner programmes who rely on those workflows can defensibly cite and trust them.
 
 <CardGrid>
-  <Card title="AAA Adaptation Atlas" icon="open-book">
-    Reference material for the Africa Agriculture Adaptation Atlas — the Atlas's data choices, methodology, and partner-facing science context.
+  <Card title="Climate-model selection" icon="open-book">
+    Which CMIP6 ensembles we recommend for African regions, why we drop the "hot model" CanESM5, and how to handle the East African Paradox in a climate rationale.
 
-    [Browse AAA wikis →](/wikis/aaa-atlas/)
+    [Read the wiki →](/wikis/aaa-atlas/african-cmip6-ensembling/)
   </Card>
   <Card title="Contribute" icon="pencil">
-    Each wiki has an "Edit this page" link in the footer (GitHub). National Meteorological Services, regional research centres, and CGIAR partners are welcome to contribute regional perspectives.
+    Each wiki has an "Edit this page" link in the footer (GitHub). National Meteorological Services, regional research centres, and CGIAR partner teams are welcome to contribute regional perspectives or new reference pages.
 
     [How to contribute →](/wikis/contributing/)
   </Card>
 </CardGrid>
 
+## Why this site exists
+
+CGIAR Climate Action publishes climate-rationale tools that surface future-climate projections to people writing Green Climate Fund concept notes, Adaptation Fund proposals, NAP submissions, and research-for-development scenario briefs. Behind every chart in those tools sit dozens of methodology choices — which climate models, which scenarios, which downscaling product, which regional tuning — and those choices need to be **defensible to the partners who will cite them**.
+
+The first wiki here grew directly out of one of those tools: the [AAA Adaptation Atlas](https://adaptationatlas.cgiar.org/)'s *Build a Climate Rationale* notebook. To put future-rainfall projections in front of proposal authors honestly, we needed a clear, public answer to a single question — *which CMIP6 climate-model ensembles can we defensibly use for each African region?* That investigation, with its caveats and regional sub-ensembles, became the [African CMIP6 Ensembling wiki](/wikis/aaa-atlas/african-cmip6-ensembling/). It is the first of several reference pages the Data Hub will publish.
+
 ## About this site
 
-This is the *staging and testing* repository for wikis that the CGIAR Climate Data Hub team publishes. Authoring happens here in plain Markdown (with optional MDX for richer components); the site is built with [Astro Starlight](https://starlight.astro.build/) and deployed to GitHub Pages on every push to `main`.
-
-Source of truth varies per wiki — some are drafted in their home repository and synced here; others are authored directly here. Each page's `frontmatter` makes the source explicit.
+Authoring happens here in plain Markdown (with optional MDX for richer components); the site is built with [Astro Starlight](https://starlight.astro.build/) and deployed to GitHub Pages on every push to `main`. Source of truth varies per wiki — some are drafted in their originating CGIAR programme's repository and synced here; others are authored directly. Each page's frontmatter makes the source explicit.

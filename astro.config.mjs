@@ -51,7 +51,7 @@ export default defineConfig({
           ],
         },
         {
-          label: 'AAA Adaptation Atlas',
+          label: 'Climate model selection',
           items: [
             { label: 'Overview', slug: 'aaa-atlas' },
             {
