@@ -55,8 +55,65 @@ export default defineConfig({
           items: [
             { label: 'Overview', slug: 'aaa-atlas' },
             {
+              label: 'Projections primer',
+              slug: 'aaa-atlas/projections-primer',
+            },
+            {
+              label: 'Climate models 101',
+              slug: 'aaa-atlas/climate-models-101',
+              badge: { text: 'draft', variant: 'caution' },
+            },
+            {
+              label: 'Why models disagree',
+              slug: 'aaa-atlas/why-models-disagree',
+              badge: { text: 'draft', variant: 'caution' },
+            },
+            {
+              label: 'Downscaling',
+              slug: 'aaa-atlas/downscaling',
+              badge: { text: 'draft', variant: 'caution' },
+            },
+            {
+              label: 'Bias correction',
+              slug: 'aaa-atlas/bias-correction',
+              badge: { text: 'draft', variant: 'caution' },
+            },
+            {
+              label: 'Dataset landscape',
+              slug: 'aaa-atlas/dataset-landscape',
+              badge: { text: 'draft', variant: 'caution' },
+            },
+            {
+              label: 'Regional evaluation',
+              slug: 'aaa-atlas/regional-evaluation',
+              badge: { text: 'draft', variant: 'caution' },
+            },
+            {
               label: 'African CMIP6 Ensembling',
               slug: 'aaa-atlas/african-cmip6-ensembling',
+            },
+            {
+              label: 'East African Paradox',
+              slug: 'aaa-atlas/east-african-paradox',
+              badge: { text: 'draft', variant: 'caution' },
+            },
+            {
+              label: "What's next — CMIP7 + CORDEX",
+              slug: 'aaa-atlas/future-projections',
+              badge: { text: 'draft', variant: 'caution' },
+            },
+            {
+              label: 'Voices from the field',
+              slug: 'aaa-atlas/voices',
+              badge: { text: 'open call', variant: 'note' },
+            },
+            {
+              label: 'Glossary',
+              slug: 'aaa-atlas/glossary',
+            },
+            {
+              label: 'References',
+              slug: 'aaa-atlas/references',
             },
           ],
         },
