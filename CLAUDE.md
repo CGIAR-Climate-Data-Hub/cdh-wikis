@@ -115,6 +115,7 @@ If deployment is failing, check the Actions tab in the GitHub UI. Most likely ca
 - **Don't add `node_modules/` or `dist/` to commits.** Both are gitignored — but if you reset the gitignore by accident, watch for these.
 - **Don't promote `0.1-draft` versions to canonical.** Bump the `version` frontmatter field on each significant content change. Old versions are retained for citation stability via git history.
 - **Don't delete or move existing wikis without asking.** Partner teams may have linked to specific URLs in proposals. Renames break those links.
+- **Don't add interactive widgets.** No sliders, no toggles, no Plotly/D3 charts, no scroll-driven explainers, no client-side JS for "engagement." These pages are reference content: static prose, tables, figures (SVG / PNG), and Starlight asides only. Partners need to cite specific revisions in proposals; interactive content breaks that, adds accessibility friction, and risks browser-version drift. If a topic genuinely demands interactivity, host it in the relevant tool (the Climate Rationale notebook, the Atlas itself) and link to it from the wiki.
 
 ## Contact
 
