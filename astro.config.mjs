@@ -35,13 +35,9 @@ export default defineConfig({
       // Last-updated timestamps in the footer use the git history.
       lastUpdated: true,
 
-      social: [
-        {
-          icon: 'github',
-          label: 'GitHub',
-          href: 'https://github.com/CGIAR-Climate-Data-Hub/wikis',
-        },
-      ],
+      social: {
+        github: 'https://github.com/CGIAR-Climate-Data-Hub/wikis',
+      },
 
       // Sidebar — grouped by "area" (the source institution / programme
       // contributing the wiki). When a new wiki lands, either drop it in
