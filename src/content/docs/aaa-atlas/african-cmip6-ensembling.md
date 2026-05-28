@@ -2,7 +2,7 @@
 title: "African CMIP6 Ensembling — Choosing Climate Models for Regional Adaptation Work"
 description: "Why we use different climate-model ensembles for different African regions, what that means for your climate rationale, and where the science still has open questions."
 area: AAA Adaptation Atlas
-version: "0.1-draft"
+version: "0.3-validated"
 sourceOfTruth: "atlas_notebooks/playbook/reference/african_cmip6_ensembling/"
 authors:
   - name: "Adaptation Atlas team"
@@ -58,7 +58,7 @@ Our answer: **use a regionally-tuned subset, guided by the peer-reviewed evaluat
 
 Our projections come from NASA's **NEX-GDDP-CMIP6** dataset — a statistically-downscaled version of the global CMIP6 model archive, served at 0.25° resolution (about 25 km grid spacing), which is fine enough to be useful at the country and admin-1 scale for Africa.
 
-NEX-GDDP-CMIP6 includes **18 climate models** drawn from the broader CMIP6 archive. Some well-known CMIP6 models — UKESM1-0-LL (UK Met Office), HadGEM3-GC31-MM (also UK Met Office), GFDL-CM4 (NOAA) — are *not* in NEX-GDDP-CMIP6, simply because NASA didn't downscale them. That constrains what we can offer.
+The Atlas currently ingests **18 climate models** from NEX-GDDP-CMIP6. (NASA's full NEX-GDDP-CMIP6 catalogue is broader — the [2022 Thrasher et al. *Scientific Data* paper](https://doi.org/10.1038/s41597-022-01393-4) documents 35 models — but the Atlas's pipeline was built around the original 18-model release.) Some well-known CMIP6 models — UKESM1-0-LL (UK Met Office), HadGEM3-GC31-MM (also UK Met Office), GFDL-CM4 (NOAA) — are *not* in any NEX-GDDP-CMIP6 release, simply because NASA didn't downscale them. That constrains what the Atlas can offer.
 
 The full 18-model pool we can draw on:
 
@@ -96,13 +96,13 @@ So we use **AR6 reference regions** (the standard sub-regions defined by [Iturbi
 
 For each AR6 sub-region in sub-Saharan Africa, we select a sub-ensemble whose composition is supported by the regional evaluation literature.
 
-**Western Africa (AFR-WAF, 8 models)** — drops models that consistently underperform on the West African monsoon (notably the ACCESS family, which has a well-documented Sahel cold bias). Keeps the IPSL family, EC-Earth3 variants, and the GFDL / NorESM family, which the regional literature flags as robust performers over the Sahel and Guinea coast. *References*: [Akinsanola et al. 2021](https://journals.ametsoc.org/view/journals/clim/34/10/JCLI-D-20-0535.1.xml); [Makinde et al. 2024](https://doi.org/10.1002/joc.70371) (West African Westerly Jet representation).
+**Western Africa (AFR-WAF, 8 models)** — drops models that consistently underperform on the West African monsoon (notably the ACCESS family, which has a well-documented Sahel cold bias). Keeps the IPSL family, EC-Earth3 variants, and the GFDL / NorESM family, which the regional literature flags as robust performers over the Sahel and Guinea coast. *References*: [Faye & Akinsanola 2022](https://doi.org/10.1007/s00382-021-05942-2) (CMIP6 extreme precipitation over West Africa); [Makinde et al. 2026](https://doi.org/10.1002/joc.70371) (West African Westerly Jet representation).
 
 **Central Africa (AFR-CAF, 8 models)** — limited region-specific evaluation literature compared to West and East Africa. We default to the "consistent African performers" subset (same composition as AFR-WAF). Users in Central Africa should treat projections with somewhat higher epistemic uncertainty than other regions; the model-evaluation evidence base is thinner. *Reference*: [Samuel et al. 2025](https://doi.org/10.1002/joc.8672) (continental).
 
 **East Africa and Horn of Africa (AFR-EAF, 7 models)** — the [Park et al. 2023](https://doi.org/10.1007/s00382-022-06622-5) analysis of long-rains and short-rains representation flags ACCESS-ESM1-5, EC-Earth3-Veg, MRI-ESM2-0, IPSL-CM6A-LR, and MPI-ESM1-2-HR as the best CMIP6 models for the Greater Horn of Africa. Two of their top picks (UKESM1-0-LL and HadGEM3-GC31-MM) are not in NEX-GDDP-CMIP6, so our AFR-EAF subset is a constrained version of their recommendation. **See the East African Paradox caveat below — it applies to ALL these models.**
 
-**Southern Africa — Western (AFR-WSAF, 8 models)**, and **Eastern (AFR-ESAF, 8 models)** — the ACCESS family (developed in Australia, tuned for Southern Hemisphere subtropical dynamics) performs notably well over the Kalahari–Namib axis and the eastern escarpment systems. AFR-WSAF and AFR-ESAF both include the ACCESS pair plus the core African-performers set. *References*: [Pinto et al. 2018](https://doi.org/10.5194/esd-9-535-2018); Lim Kam Sian et al. 2021.
+**Southern Africa — Western (AFR-WSAF, 8 models)**, and **Eastern (AFR-ESAF, 8 models)** — the ACCESS family (developed in Australia, tuned for Southern Hemisphere subtropical dynamics) performs notably well over the Kalahari–Namib axis and the eastern escarpment systems. AFR-WSAF and AFR-ESAF both include the ACCESS pair plus the core African-performers set. *References*: [Pinto et al. 2018](https://doi.org/10.1002/joc.5666) (Southern Africa CORDEX/CMIP5 process-based evaluation); [Lim Kam Sian et al. 2021](https://doi.org/10.3390/atmos12060742) (multi-decadal variability and future changes in precipitation over Southern Africa).
 
 **Madagascar and small islands (AFR-MDG, 13 models)** — Madagascar is a special case. At 0.25° resolution, the NEX-GDDP-CMIP6 models cannot fully resolve Madagascar's island climate — the rain-shadow effect of the eastern escarpment, the cyclone tracks, the windward / leeward asymmetry. We use the broader AFR-13 subset for Madagascar to avoid artificially narrowing the uncertainty when the underlying data is fundamentally limited by resolution. *Read this as*: for Madagascar, treat projection ranges with extra epistemic caution; consult dynamically-downscaled (CORDEX-Africa) products where available.
 
@@ -261,19 +261,19 @@ We're seeking 2–3 paragraph contributions from National Meteorological Service
 - **Hausfather, Z., Marvel, K., Schmidt, G. A., Nielsen-Gammon, J. W., Zelinka, M. (2022).** "Climate simulations: recognize the 'hot model' problem." *Nature* 605, 26–29. [https://doi.org/10.1038/d41586-022-01192-2](https://doi.org/10.1038/d41586-022-01192-2)
 - **Iturbide, M. et al. (2020).** "An update of IPCC climate reference regions for subcontinental analysis of climate model data." *Earth System Science Data* 12, 2959–2970. [https://doi.org/10.5194/essd-12-2959-2020](https://doi.org/10.5194/essd-12-2959-2020)
 - **Samuel, S., Mengistu Tsidu, G., Dosio, A., Mphale, K. (2025).** "Assessment of Historical and Future Mean and Extreme Precipitation Over Sub-Saharan Africa Using NEX-GDDP-CMIP6: Part I — Evaluation of Historical Simulation." *International Journal of Climatology*. [https://doi.org/10.1002/joc.8672](https://doi.org/10.1002/joc.8672)
-- **Tebaldi, C., Snyder, M., Dorheim, K. (2022).** "Climate impact assessments should not discount 'hot' models." *Nature* 605, 192–193. [https://doi.org/10.1038/d41586-022-02241-6](https://doi.org/10.1038/d41586-022-02241-6)
+- **Bloch-Johnson, J., Rugenstein, M., Gregory, J., Cael, B. B. & Andrews, T. (2022).** "Climate impact assessments should not discount 'hot' models." *Nature* 608, 667. [https://doi.org/10.1038/d41586-022-02241-6](https://doi.org/10.1038/d41586-022-02241-6)
 
 ### East African Paradox
 
 - **Park, S., Sniderman, J. M. K., Frierson, D. M. W., McKinnon, K. A. (2023).** "Understanding CMIP6 biases in the representation of the Greater Horn of Africa long and short rains." *Climate Dynamics*. [https://doi.org/10.1007/s00382-022-06622-5](https://doi.org/10.1007/s00382-022-06622-5)
 - **Schwarzwald, K., Brönnimann, S., Vellinga, M., Schmid, M. (2024).** "Revisiting the 'East African Paradox': CMIP6 Models Also Struggle to Reproduce Strong Observed Long Rain Drying Trends." *Journal of Climate* 37(24). [https://journals.ametsoc.org/view/journals/clim/37/24/JCLI-D-24-0225.1.xml](https://journals.ametsoc.org/view/journals/clim/37/24/JCLI-D-24-0225.1.xml)
-- **Wainwright, C. M., Marsham, J. H., Black, E. C. L., Quaife, T., Allan, R. P. (2019).** "'Eastern African Paradox' rainfall decline due to shorter not less intense Long Rains." *npj Climate and Atmospheric Science* 2, 34. [https://doi.org/10.1038/s41612-019-0091-7](https://doi.org/10.1038/s41612-019-0091-7)
+- **Wainwright, C. M., Marsham, J. H., Black, E., Allan, R. P. (2019).** "'Eastern African Paradox' rainfall decline due to shorter not less intense Long Rains." *npj Climate and Atmospheric Science* 2, 34. [https://doi.org/10.1038/s41612-019-0091-7](https://doi.org/10.1038/s41612-019-0091-7)
 
 ### Regional evaluations
 
-- **Akinsanola, A. A. et al. (2021).** West Africa CMIP6 evaluation. [https://journals.ametsoc.org/view/journals/clim/34/10/JCLI-D-20-0535.1.xml](https://journals.ametsoc.org/view/journals/clim/34/10/JCLI-D-20-0535.1.xml)
+- **Faye, A. & Akinsanola, A. A. (2022).** "Evaluation of extreme precipitation indices over West Africa in CMIP6 models." *Climate Dynamics* 58, 925–939. [https://doi.org/10.1007/s00382-021-05942-2](https://doi.org/10.1007/s00382-021-05942-2)
 - **Makinde, A. A. et al. (2024).** West African Westerly Jet representation. [https://doi.org/10.1002/joc.70371](https://doi.org/10.1002/joc.70371)
-- **Pinto, I., Jack, C., Hewitson, B. (2018).** Southern African CORDEX evaluation. *Earth System Dynamics*. [https://doi.org/10.5194/esd-9-535-2018](https://doi.org/10.5194/esd-9-535-2018)
+- **Pinto, I., Jack, C., Hewitson, B. (2018).** "Process-based model evaluation and projections over Southern Africa from CORDEX and CMIP5 models." *International Journal of Climatology* 38(11), 4251–4264. [https://doi.org/10.1002/joc.5666](https://doi.org/10.1002/joc.5666)
 - **Ayugi, B. et al. (2021).** East Africa CMIP6 future extremes. *Water*. [https://doi.org/10.3390/w13172358](https://doi.org/10.3390/w13172358)
 
 ### Forward-look
