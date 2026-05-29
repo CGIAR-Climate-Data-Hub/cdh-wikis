@@ -1,0 +1,165 @@
+/*
+ * CGIAR Climate Action — visual identity for the wikis
+ *
+ * Source: "Climate Action visual identity.pdf" (OneDrive, Frontend UI & UX).
+ * Translates the CGIAR Climate Action brand palette + typography into
+ * Starlight's CSS-variable interface.
+ *
+ * Hierarchy:
+ *   - CGIAR base palette: deep greens + mint accents (Climate Action root)
+ *   - Program palette: blues (Climate Action's program-specific accents)
+ *   - Greys 1–8: warm-neutral scale used for chrome and dividers
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&family=Noto+Serif:wght@400;700&family=Noto+Sans+Mono:wght@400;500&display=swap');
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* Brand tokens — exposed as variables so SVGs and components can reference   */
+/* ────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* CGIAR base */
+  --cdh-primary:           #033529;
+  --cdh-primary-accent:    #17F1BD;
+  --cdh-primary-dark:      #010D09;
+  --cdh-primary-light:     #E2E0DF;
+  --cdh-dark-green:        #02211A;
+  --cdh-lighter-green:     #065F4A;
+  --cdh-highlight-green:   #57FAD3;
+  --cdh-white:             #FFFFFF;
+
+  /* Climate Action program */
+  --cdh-program:           #63A9FE;
+  --cdh-program-accent:    #1955A6;
+
+  /* Warm-neutral grey scale */
+  --cdh-grey-1: #E2E0DF;
+  --cdh-grey-2: #C6C4C3;
+  --cdh-grey-3: #AAA8A7;
+  --cdh-grey-4: #8E8C8C;
+  --cdh-grey-5: #727070;
+  --cdh-grey-6: #555554;
+  --cdh-grey-7: #393939;
+  --cdh-grey-8: #1D1D1D;
+
+  /* Font stacks */
+  --cdh-font-sans:  'Noto Sans', Arial, system-ui, -apple-system, sans-serif;
+  --cdh-font-serif: 'Noto Serif', 'Times New Roman', Georgia, serif;
+  --cdh-font-mono:  'Noto Sans Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* Starlight overrides — light mode (default)                                 */
+/* ────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* Accent ramp — the colour used for links, focused buttons, active states */
+  --sl-color-accent-low:  #CFEDE3;     /* tint of lighter-green, for backgrounds */
+  --sl-color-accent:      #065F4A;     /* lighter-green — readable link colour */
+  --sl-color-accent-high: #033529;     /* primary deep green — accent text on light */
+
+  /* White ramp — surfaces and chrome */
+  --sl-color-white:      #FFFFFF;
+  --sl-color-gray-1:     #F5F4F3;      /* a touch warmer than pure neutral */
+  --sl-color-gray-2:     #E2E0DF;      /* grey-1 from the brand */
+  --sl-color-gray-3:     #C6C4C3;      /* grey-2 */
+  --sl-color-gray-4:     #8E8C8C;      /* grey-4 */
+  --sl-color-gray-5:     #555554;      /* grey-6 */
+  --sl-color-gray-6:     #393939;      /* grey-7 */
+  --sl-color-black:      #1D1D1D;      /* grey-8 (deepest readable, not pure black) */
+
+  /* Text */
+  --sl-color-text:        var(--cdh-grey-8);
+  --sl-color-text-accent: var(--sl-color-accent);
+  --sl-color-text-invert: var(--cdh-primary-light);
+
+  /* Backgrounds */
+  --sl-color-bg:                 var(--cdh-white);
+  --sl-color-bg-nav:             var(--cdh-white);
+  --sl-color-bg-sidebar:         var(--cdh-primary-light);   /* warm cream */
+  --sl-color-bg-inline-code:     #F5F4F3;
+  --sl-color-bg-accent:          var(--sl-color-accent);
+
+  /* Borders */
+  --sl-color-hairline:           var(--cdh-grey-2);
+  --sl-color-hairline-light:     var(--cdh-grey-1);
+  --sl-color-hairline-shade:     var(--cdh-grey-3);
+
+  /* Typography */
+  --sl-font:        var(--cdh-font-sans);
+  --sl-font-system: var(--cdh-font-sans);
+  --sl-font-mono:   var(--cdh-font-mono);
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* Starlight overrides — dark mode                                            */
+/* ────────────────────────────────────────────────────────────────────────── */
+
+:root[data-theme='dark'] {
+  /* Accent ramp — brighten on dark so links remain legible */
+  --sl-color-accent-low:  #033529;
+  --sl-color-accent:      var(--cdh-primary-accent);  /* mint reads beautifully on deep green */
+  --sl-color-accent-high: var(--cdh-highlight-green);
+
+  /* White ramp inverts on dark */
+  --sl-color-white:      var(--cdh-grey-8);
+  --sl-color-gray-1:     var(--cdh-grey-7);
+  --sl-color-gray-2:     var(--cdh-grey-6);
+  --sl-color-gray-3:     var(--cdh-grey-5);
+  --sl-color-gray-4:     var(--cdh-grey-4);
+  --sl-color-gray-5:     var(--cdh-grey-3);
+  --sl-color-gray-6:     var(--cdh-grey-2);
+  --sl-color-black:      var(--cdh-primary-light);
+
+  /* Text */
+  --sl-color-text:        var(--cdh-primary-light);
+  --sl-color-text-accent: var(--cdh-primary-accent);
+  --sl-color-text-invert: var(--cdh-grey-8);
+
+  /* Backgrounds */
+  --sl-color-bg:                 var(--cdh-primary-dark);
+  --sl-color-bg-nav:             var(--cdh-dark-green);
+  --sl-color-bg-sidebar:         var(--cdh-dark-green);
+  --sl-color-bg-inline-code:     var(--cdh-grey-7);
+  --sl-color-bg-accent:          var(--cdh-primary-accent);
+
+  /* Borders */
+  --sl-color-hairline:           var(--cdh-grey-7);
+  --sl-color-hairline-light:     var(--cdh-grey-8);
+  --sl-color-hairline-shade:     var(--cdh-grey-6);
+}
+
+/* ────────────────────────────────────────────────────────────────────────── */
+/* Typography — page titles use Noto Serif per the brand                      */
+/* ────────────────────────────────────────────────────────────────────────── */
+
+.sl-markdown-content h1,
+.content-panel h1,
+h1.page-title {
+  font-family: var(--cdh-font-serif);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Tip-style callouts (Starlight's :::tip aside) — serif body for "If you
+   remember one thing" pull-quote treatment. */
+.starlight-aside--tip > .starlight-aside__content {
+  font-family: var(--cdh-font-serif);
+  font-size: 1.05em;
+}
+
+/* Subtle: links pick up the accent ramp + lift on hover */
+.sl-markdown-content a,
+.sl-link-card a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.sl-markdown-content a:hover {
+  color: var(--sl-color-accent-high);
+}
+
+/* Code blocks use the mono font and the warmer neutral background */
+.sl-markdown-content code {
+  font-family: var(--cdh-font-mono);
+}

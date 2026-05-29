@@ -26,6 +26,17 @@ export default defineConfig({
       description:
         'Reference and knowledge wikis from the CGIAR Climate Data Hub community — staging and publishing area for partner-facing climate-science reference material.',
 
+      // Climate Action visual identity — full logo (CGIAR shield + CGIAR
+      // wordmark + Climate Action block). The logo has its own background
+      // and reads on both light and dark themes, so no light/dark variants
+      // are needed. Replace this PNG with an SVG when one is supplied by
+      // the Climate Action design team. The favicon (CGIAR shield alone)
+      // is a separate file — still TODO.
+      logo: {
+        src: './src/assets/cgiar-climate-action-logo.png',
+        alt: 'CGIAR Climate Action',
+      },
+
       // Edit-on-GitHub link in each page footer.
       editLink: {
         baseUrl:
@@ -128,8 +139,8 @@ export default defineConfig({
         },
       ],
 
-      // CSS overrides for CGIAR branding go here once design lands.
-      // customCss: ['./src/styles/cgiar.css'],
+      // CGIAR Climate Action visual identity — see src/styles/cgiar.css.
+      customCss: ['./src/styles/cgiar.css'],
 
       // Don't fight Starlight's defaults on the components — Asides
       // (`:::note` `:::tip` `:::caution` `:::danger`) cover the callout
