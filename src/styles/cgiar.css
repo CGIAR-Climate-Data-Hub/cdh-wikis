@@ -101,15 +101,18 @@
   --sl-color-accent:      var(--cdh-primary-accent);  /* mint reads beautifully on deep green */
   --sl-color-accent-high: var(--cdh-highlight-green);
 
-  /* White ramp inverts on dark */
-  --sl-color-white:      var(--cdh-grey-8);
-  --sl-color-gray-1:     var(--cdh-grey-7);
-  --sl-color-gray-2:     var(--cdh-grey-6);
-  --sl-color-gray-3:     var(--cdh-grey-5);
-  --sl-color-gray-4:     var(--cdh-grey-4);
-  --sl-color-gray-5:     var(--cdh-grey-3);
-  --sl-color-gray-6:     var(--cdh-grey-2);
-  --sl-color-black:      var(--cdh-primary-light);
+  /* White ramp inverts on dark.
+     Our sidebar bg (#02211A) is darker than Starlight's default dark (~#1c1c1e),
+     so greys 1-4 must be shifted significantly lighter to stay legible.
+     Starlight uses gray-2 for sidebar link text — needs ≥ 4.5:1 on #02211A. */
+  --sl-color-white:      var(--cdh-grey-8);    /* #1D1D1D — background surfaces */
+  --sl-color-gray-1:     var(--cdh-grey-7);    /* #393939 — subtle dividers */
+  --sl-color-gray-2:     var(--cdh-grey-3);    /* #AAA8A7 — sidebar link text (was grey-6 = too dark) */
+  --sl-color-gray-3:     var(--cdh-grey-4);    /* #8E8C8C */
+  --sl-color-gray-4:     var(--cdh-grey-5);    /* #727070 */
+  --sl-color-gray-5:     var(--cdh-grey-2);    /* #C6C4C3 */
+  --sl-color-gray-6:     var(--cdh-grey-1);    /* #E2E0DF — near-white */
+  --sl-color-black:      var(--cdh-primary-light);  /* #E2E0DF — body text */
 
   /* Text */
   --sl-color-text:        var(--cdh-primary-light);
