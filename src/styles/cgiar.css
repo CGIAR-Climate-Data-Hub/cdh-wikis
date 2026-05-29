@@ -151,15 +151,16 @@ h1.page-title {
   font-size: 1.05em;
 }
 
-/* Dark-mode asides — Starlight's aside backgrounds are fixed colours that
-   don't adapt to our palette; body text can end up dark on a coloured bg. */
-:root[data-theme='dark'] .starlight-aside {
-  color: var(--cdh-primary-light);
-}
+/* Dark-mode asides — Starlight's aside uses `color: var(--sl-color-white)`
+   for body text. We set --sl-color-white to #1D1D1D (surface colour) in
+   dark mode, which makes aside text invisible on coloured backgrounds.
+   !important needed to beat Starlight's scoped component styles. */
+:root[data-theme='dark'] .starlight-aside,
 :root[data-theme='dark'] .starlight-aside p,
 :root[data-theme='dark'] .starlight-aside li,
-:root[data-theme='dark'] .starlight-aside strong {
-  color: var(--cdh-primary-light);
+:root[data-theme='dark'] .starlight-aside strong,
+:root[data-theme='dark'] .starlight-aside em {
+  color: var(--cdh-primary-light) !important;
 }
 
 /* Dark-mode heading contrast — Starlight defaults h2/h3 to the accent colour
@@ -172,12 +173,22 @@ h1.page-title {
   color: var(--cdh-primary-light);   /* #E2E0DF — warm off-white, high contrast on deep green */
 }
 
-/* Sidebar group label contrast — Starlight's .large uses var(--sl-color-white)
-   which our dark-mode palette maps to #1D1D1D (near-black), making group labels
-   invisible on the #02211A sidebar background. Force off-white explicitly. */
+/* Sidebar group label + nav link contrast.
+   Starlight uses --sl-color-white for .large (group labels) and for active
+   nav items. We set --sl-color-white = #1D1D1D in dark mode (a surface
+   colour), which makes those elements invisible. !important to beat scoped
+   component styles. */
 :root[data-theme='dark'] .group-label .large,
 :root[data-theme='dark'] .group-label span {
-  color: var(--cdh-grey-2);   /* #C6C4C3 — slightly muted vs heading white, readable */
+  color: var(--cdh-grey-2) !important;
+}
+
+/* Active/hover sidebar link: mint bg + dark text is readable; this rule
+   keeps non-active links legible via the grey ramp fix in --sl-color-gray-2.
+   Active item text override needed because it explicitly sets --sl-color-text-invert. */
+:root[data-theme='dark'] a[aria-current='page'],
+:root[data-theme='dark'] a[aria-current='page'] * {
+  color: var(--cdh-primary-dark) !important;   /* near-black on mint — intentionally dark */
 }
 
 /* Subtle: links pick up the accent ramp + lift on hover */
