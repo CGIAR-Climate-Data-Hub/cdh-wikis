@@ -151,6 +151,17 @@ h1.page-title {
   font-size: 1.05em;
 }
 
+/* Dark-mode asides — Starlight's aside backgrounds are fixed colours that
+   don't adapt to our palette; body text can end up dark on a coloured bg. */
+:root[data-theme='dark'] .starlight-aside {
+  color: var(--cdh-primary-light);
+}
+:root[data-theme='dark'] .starlight-aside p,
+:root[data-theme='dark'] .starlight-aside li,
+:root[data-theme='dark'] .starlight-aside strong {
+  color: var(--cdh-primary-light);
+}
+
 /* Dark-mode heading contrast — Starlight defaults h2/h3 to the accent colour
    (mint #17F1BD) which is too saturated to scan comfortably. Use warm off-white
    instead; keep h1 as-is (it's already inheriting correctly). */
