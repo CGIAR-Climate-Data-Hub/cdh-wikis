@@ -62,7 +62,7 @@ export default defineConfig({
           ],
         },
         {
-          label: 'Climate model selection',
+          label: 'Climate data for African adaptation',
           items: [
             { label: 'Overview', slug: 'aaa-atlas' },
             {
