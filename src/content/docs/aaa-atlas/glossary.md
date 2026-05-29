@@ -18,6 +18,8 @@ A reference glossary for the terms used across this section. Every page in the s
 
 **AR6** — the IPCC's Sixth Assessment Report. Working Group I (physical science basis) was published 2021; Working Group II (impacts, adaptation, vulnerability) in 2022; Working Group III (mitigation) in 2022; Synthesis Report in 2023. The current reference cycle for climate-science assessment. AR7 is in progress.
 
+**Baseline** — see *Reference period*.
+
 **Bias correction** — adjusting a climate model's output to better match observed climate over a historical reference period. See the [Bias correction](/wikis/aaa-atlas/bias-correction/) page.
 
 **Climate projection** — a future climate simulation conditional on a specific emissions scenario. *Projection ≠ prediction* — projections are scenario-dependent. See the [Projections primer](/wikis/aaa-atlas/projections-primer/).
@@ -45,6 +47,8 @@ A reference glossary for the terms used across this section. Every page in the s
 **Reanalysis** — a historical climate dataset produced by running a frozen-version weather forecast model with all available observations assimilated. Not the same as direct observation — it's a model-assisted gridded estimate. ERA5, MERRA-2, JRA-55 are the major reanalyses.
 
 **RCM** — Regional Climate Model. A finer-resolution model that takes a global GCM as input and produces a higher-resolution regional simulation. The basis of CORDEX.
+
+**Reference period** (or **baseline**) — the multi-year window of past climate against which present or future climate change is measured. Three reference periods turn up in African work: **1850–1900** (IPCC pre-industrial anchor, used for the Paris targets); **1991–2020** (WMO operational normal, used in the Atlas's Recent Changes view and in WMO reporting); **1995–2014** (CMIP6 standard, used in NEX-GDDP-CMIP6 and the Atlas's Future Projections view). The Atlas uses two different periods on purpose — see [Baselines and reference periods](/wikis/aaa-atlas/baselines/).
 
 **r1i1p1f1** — the standard "first physical ensemble member" of a CMIP6 model run. The first of typically several realisations of a model; each realisation differs only in initial conditions, sampling internal variability. The Adaptation Atlas uses this realisation across all 18 models for consistency.
 

@@ -59,6 +59,10 @@ export default defineConfig({
               slug: 'aaa-atlas/projections-primer',
             },
             {
+              label: 'Baselines',
+              slug: 'aaa-atlas/baselines',
+            },
+            {
               label: 'Climate models 101',
               slug: 'aaa-atlas/climate-models-101',
               badge: { text: 'draft', variant: 'caution' },
