@@ -2,23 +2,35 @@
  * CGIAR Climate Action — visual identity for the wikis
  *
  * Source: "Climate Action visual identity.pdf" (OneDrive, Frontend UI & UX).
- * Translates the CGIAR Climate Action brand palette + typography into
- * Starlight's CSS-variable interface.
  *
- * Hierarchy:
- *   - CGIAR base palette: deep greens + mint accents (Climate Action root)
- *   - Program palette: blues (Climate Action's program-specific accents)
- *   - Greys 1–8: warm-neutral scale used for chrome and dividers
+ * Architecture (Option 1 — follow Starlight's token contract):
+ *
+ *   Starlight's convention:
+ *     --sl-color-white = near-WHITE in BOTH themes (it's a text colour on dark
+ *       surfaces: aside body, sidebar labels, markdown headings).
+ *     --sl-color-black = near-BLACK in BOTH themes (dark surface / bg colour).
+ *     grey ramp goes light→dark in dark mode, dark→light in light mode.
+ *
+ *   We ONLY override:
+ *     - Semantic surface tokens (--sl-color-bg-*)
+ *     - Semantic text tokens (--sl-color-text, --sl-color-text-accent)
+ *     - Accent ramp (--sl-color-accent-*)
+ *     - Border tokens
+ *     - Font stack
+ *
+ *   We do NOT touch --sl-color-white, --sl-color-black, or the grey ramp.
+ *   This means Starlight's aside text, sidebar labels, and headings all use
+ *   the correct Starlight defaults and need no !important overrides.
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&family=Noto+Serif:wght@400;700&family=Noto+Sans+Mono:wght@400;500&display=swap');
 
 /* ────────────────────────────────────────────────────────────────────────── */
-/* Brand tokens — exposed as variables so SVGs and components can reference   */
+/* Brand tokens — always available to CSS and SVGs                            */
 /* ────────────────────────────────────────────────────────────────────────── */
 
 :root {
-  /* CGIAR base */
+  /* CGIAR base palette */
   --cdh-primary:           #033529;
   --cdh-primary-accent:    #17F1BD;
   --cdh-primary-dark:      #010D09;
@@ -28,7 +40,7 @@
   --cdh-highlight-green:   #57FAD3;
   --cdh-white:             #FFFFFF;
 
-  /* Climate Action program */
+  /* Climate Action program blues */
   --cdh-program:           #63A9FE;
   --cdh-program-accent:    #1955A6;
 
@@ -49,24 +61,14 @@
 }
 
 /* ────────────────────────────────────────────────────────────────────────── */
-/* Starlight overrides — light mode (default)                                 */
+/* Starlight overrides — light mode                                            */
 /* ────────────────────────────────────────────────────────────────────────── */
 
-:root {
-  /* Accent ramp — the colour used for links, focused buttons, active states */
-  --sl-color-accent-low:  #CFEDE3;     /* tint of lighter-green, for backgrounds */
-  --sl-color-accent:      #065F4A;     /* lighter-green — readable link colour */
-  --sl-color-accent-high: #033529;     /* primary deep green — accent text on light */
-
-  /* White ramp — surfaces and chrome */
-  --sl-color-white:      #FFFFFF;
-  --sl-color-gray-1:     #F5F4F3;      /* a touch warmer than pure neutral */
-  --sl-color-gray-2:     #E2E0DF;      /* grey-1 from the brand */
-  --sl-color-gray-3:     #C6C4C3;      /* grey-2 */
-  --sl-color-gray-4:     #8E8C8C;      /* grey-4 */
-  --sl-color-gray-5:     #555554;      /* grey-6 */
-  --sl-color-gray-6:     #393939;      /* grey-7 */
-  --sl-color-black:      #1D1D1D;      /* grey-8 (deepest readable, not pure black) */
+:root[data-theme='light'] {
+  /* Accent ramp */
+  --sl-color-accent-low:  #CFEDE3;
+  --sl-color-accent:      #065F4A;
+  --sl-color-accent-high: #033529;
 
   /* Text */
   --sl-color-text:        var(--cdh-grey-8);
@@ -74,16 +76,16 @@
   --sl-color-text-invert: var(--cdh-primary-light);
 
   /* Backgrounds */
-  --sl-color-bg:                 var(--cdh-white);
-  --sl-color-bg-nav:             var(--cdh-white);
-  --sl-color-bg-sidebar:         var(--cdh-primary-light);   /* warm cream */
-  --sl-color-bg-inline-code:     #F5F4F3;
-  --sl-color-bg-accent:          var(--sl-color-accent);
+  --sl-color-bg:               #FFFFFF;
+  --sl-color-bg-nav:           #FFFFFF;
+  --sl-color-bg-sidebar:       var(--cdh-primary-light);   /* warm cream */
+  --sl-color-bg-inline-code:   #F5F4F3;
+  --sl-color-bg-accent:        var(--sl-color-accent);
 
   /* Borders */
-  --sl-color-hairline:           var(--cdh-grey-2);
-  --sl-color-hairline-light:     var(--cdh-grey-1);
-  --sl-color-hairline-shade:     var(--cdh-grey-3);
+  --sl-color-hairline:         var(--cdh-grey-2);
+  --sl-color-hairline-light:   var(--cdh-grey-1);
+  --sl-color-hairline-shade:   var(--cdh-grey-3);
 
   /* Typography */
   --sl-font:        var(--cdh-font-sans);
@@ -92,50 +94,43 @@
 }
 
 /* ────────────────────────────────────────────────────────────────────────── */
-/* Starlight overrides — dark mode                                            */
+/* Starlight overrides — dark mode                                             */
+/*                                                                             */
+/* --sl-color-white and the grey ramp are NOT overridden here.                 */
+/* Starlight keeps --sl-color-white = #FFFFFF in dark mode (it's the text      */
+/* colour for asides, sidebar labels, and headings). Overriding it breaks      */
+/* all those components.                                                        */
 /* ────────────────────────────────────────────────────────────────────────── */
 
 :root[data-theme='dark'] {
-  /* Accent ramp — brighten on dark so links remain legible */
+  /* Accent ramp — mint on deep green */
   --sl-color-accent-low:  #033529;
-  --sl-color-accent:      var(--cdh-primary-accent);  /* mint reads beautifully on deep green */
-  --sl-color-accent-high: var(--cdh-highlight-green);
-
-  /* White ramp inverts on dark.
-     Our sidebar bg (#02211A) is darker than Starlight's default dark (~#1c1c1e),
-     so greys 1-4 must be shifted significantly lighter to stay legible.
-     Starlight uses gray-2 for sidebar link text — needs ≥ 4.5:1 on #02211A. */
-  --sl-color-white:      var(--cdh-grey-8);    /* #1D1D1D — background surfaces */
-  --sl-color-gray-1:     var(--cdh-grey-7);    /* #393939 — subtle dividers */
-  --sl-color-gray-2:     var(--cdh-grey-3);    /* #AAA8A7 — sidebar link text (was grey-6 = too dark) */
-  --sl-color-gray-3:     var(--cdh-grey-4);    /* #8E8C8C */
-  --sl-color-gray-4:     var(--cdh-grey-5);    /* #727070 */
-  --sl-color-gray-5:     var(--cdh-grey-2);    /* #C6C4C3 */
-  --sl-color-gray-6:     var(--cdh-grey-1);    /* #E2E0DF — near-white */
-  --sl-color-black:      var(--cdh-primary-light);  /* #E2E0DF — body text */
+  --sl-color-accent:      var(--cdh-primary-accent);   /* #17F1BD */
+  --sl-color-accent-high: var(--cdh-highlight-green);  /* #57FAD3 */
 
   /* Text */
-  --sl-color-text:        var(--cdh-primary-light);
-  --sl-color-text-accent: var(--cdh-primary-accent);
-  --sl-color-text-invert: var(--cdh-grey-8);
+  --sl-color-text:        var(--cdh-primary-light);    /* #E2E0DF */
+  --sl-color-text-accent: var(--cdh-primary-accent);   /* #17F1BD */
+  --sl-color-text-invert: var(--cdh-grey-8);           /* #1D1D1D — dark text on mint active links */
 
   /* Backgrounds */
-  --sl-color-bg:                 var(--cdh-primary-dark);
-  --sl-color-bg-nav:             var(--cdh-dark-green);
-  --sl-color-bg-sidebar:         var(--cdh-dark-green);
-  --sl-color-bg-inline-code:     var(--cdh-grey-7);
-  --sl-color-bg-accent:          var(--cdh-primary-accent);
+  --sl-color-bg:               var(--cdh-primary-dark);   /* #010D09 */
+  --sl-color-bg-nav:           var(--cdh-dark-green);     /* #02211A */
+  --sl-color-bg-sidebar:       var(--cdh-dark-green);     /* #02211A */
+  --sl-color-bg-inline-code:   var(--cdh-grey-7);         /* #393939 */
+  --sl-color-bg-accent:        var(--cdh-primary-accent);
 
   /* Borders */
-  --sl-color-hairline:           var(--cdh-grey-7);
-  --sl-color-hairline-light:     var(--cdh-grey-8);
-  --sl-color-hairline-shade:     var(--cdh-grey-6);
+  --sl-color-hairline:         var(--cdh-grey-7);
+  --sl-color-hairline-light:   var(--cdh-grey-8);
+  --sl-color-hairline-shade:   var(--cdh-grey-6);
 }
 
 /* ────────────────────────────────────────────────────────────────────────── */
-/* Typography — page titles use Noto Serif per the brand                      */
+/* Typography                                                                  */
 /* ────────────────────────────────────────────────────────────────────────── */
 
+/* Page titles use Noto Serif per the brand */
 .sl-markdown-content h1,
 .content-panel h1,
 h1.page-title {
@@ -144,54 +139,13 @@ h1.page-title {
   letter-spacing: -0.01em;
 }
 
-/* Tip-style callouts (Starlight's :::tip aside) — serif body for "If you
-   remember one thing" pull-quote treatment. */
+/* Tip asides — serif body for "If you remember one thing" treatment */
 .starlight-aside--tip > .starlight-aside__content {
   font-family: var(--cdh-font-serif);
   font-size: 1.05em;
 }
 
-/* Dark-mode asides — Starlight's aside uses `color: var(--sl-color-white)`
-   for body text. We set --sl-color-white to #1D1D1D (surface colour) in
-   dark mode, which makes aside text invisible on coloured backgrounds.
-   !important needed to beat Starlight's scoped component styles. */
-:root[data-theme='dark'] .starlight-aside,
-:root[data-theme='dark'] .starlight-aside p,
-:root[data-theme='dark'] .starlight-aside li,
-:root[data-theme='dark'] .starlight-aside strong,
-:root[data-theme='dark'] .starlight-aside em {
-  color: var(--cdh-primary-light) !important;
-}
-
-/* Dark-mode heading contrast — Starlight defaults h2/h3 to the accent colour
-   (mint #17F1BD) which is too saturated to scan comfortably. Use warm off-white
-   instead; keep h1 as-is (it's already inheriting correctly). */
-:root[data-theme='dark'] h1,
-:root[data-theme='dark'] h2,
-:root[data-theme='dark'] h3,
-:root[data-theme='dark'] h4 {
-  color: var(--cdh-primary-light);   /* #E2E0DF — warm off-white, high contrast on deep green */
-}
-
-/* Sidebar group label + nav link contrast.
-   Starlight uses --sl-color-white for .large (group labels) and for active
-   nav items. We set --sl-color-white = #1D1D1D in dark mode (a surface
-   colour), which makes those elements invisible. !important to beat scoped
-   component styles. */
-:root[data-theme='dark'] .group-label .large,
-:root[data-theme='dark'] .group-label span {
-  color: var(--cdh-grey-2) !important;
-}
-
-/* Active/hover sidebar link: mint bg + dark text is readable; this rule
-   keeps non-active links legible via the grey ramp fix in --sl-color-gray-2.
-   Active item text override needed because it explicitly sets --sl-color-text-invert. */
-:root[data-theme='dark'] a[aria-current='page'],
-:root[data-theme='dark'] a[aria-current='page'] * {
-  color: var(--cdh-primary-dark) !important;   /* near-black on mint — intentionally dark */
-}
-
-/* Subtle: links pick up the accent ramp + lift on hover */
+/* Links — thin underline, lift on hover */
 .sl-markdown-content a,
 .sl-link-card a {
   text-decoration-thickness: 1px;
@@ -202,7 +156,7 @@ h1.page-title {
   color: var(--sl-color-accent-high);
 }
 
-/* Code blocks use the mono font and the warmer neutral background */
+/* Code blocks */
 .sl-markdown-content code {
   font-family: var(--cdh-font-mono);
 }
