@@ -58,8 +58,8 @@ If multiple emissions scenarios are shown, each one gets its own coloured mean-a
 If a chart shows **only the mean and not the spread**, half the story is missing — treat it with caution and look for the source's underlying data. Honest charts always include the spread.
 
 <figure>
-<img src="./figures/F-projection-chart-anatomy.png" alt="Annotated time-series chart showing two SSP scenario bands from 2020 to 2100. Each band has a thick central line (ensemble mean) and a shaded envelope (inter-model spread). The bands overlap near-term and diverge after 2050. Labels point to: ensemble mean, inter-model spread, scenario uncertainty, and near-term overlap zone.">
-<figcaption><strong>Figure 1.</strong> Anatomy of a multi-model projection chart. Each coloured band represents one emissions scenario: the thick line is the ensemble mean across models; the shading is the inter-model spread (typically the 17–83 % range). Near-term bands overlap because internal variability dominates; end-of-century bands diverge as scenario choice becomes the largest source of uncertainty. placeholder — to be commissioned</figcaption>
+<img src="./figures/F-projection-chart-anatomy.svg" alt="Schematic line chart from 2020 to 2100 with two CMIP6 emissions scenarios: SSP2-4.5 shown in blue and SSP5-8.5 in amber. Each scenario has a thick central line (the ensemble mean) and a shaded envelope behind it (the 17–83% inter-model spread). The two scenario bands overlap heavily through the 2030s and diverge by 2100, with SSP5-8.5 reaching about 4.6 °C and SSP2-4.5 about 2.7 °C above the 1991–2020 baseline. Four annotation callouts label the ensemble mean, the inter-model spread, the scenario uncertainty (the gap between scenarios at the right edge), and the near-term region where the bands overlap and internal variability dominates the uncertainty.">
+<figcaption><strong>Figure 1.</strong> Anatomy of a projection chart (interim schematic). Two stylised CMIP6 emissions scenarios — SSP2-4.5 in blue, SSP5-8.5 in amber — showing how every honest projection chart layers three things: a central estimate (ensemble mean), inter-model spread (shaded envelope), and scenario uncertainty (the gap between scenarios that opens by end-of-century). Y-axis is °C above <strong>1991–2020</strong> (the wiki's default baseline; see <a href="/wikis/aaa-atlas/baselines/">Baselines and reference periods</a>). <em>Interim schematic — the final figure will be derived from <a href="https://www.ipcc.ch/report/ar6/wg1/figures/summary-for-policymakers/figure-spm-8/">IPCC AR6 WGI SPM Figure 8, panel (a)</a> (CC-BY 4.0) per the <a href="https://github.com/CGIAR-Climate-Data-Hub/wikis/blob/main/playbook/cmip6-wiki/figure-commissions/F-projection-chart-anatomy.md">commission brief</a>.</em></figcaption>
 </figure>
 
 ## Where this fits in a climate rationale
@@ -86,3 +86,12 @@ Projections sit in part (3), but always read alongside (1) and (2) — a project
 | What does the Atlas specifically use? | [Atlas approach](/wikis/aaa-atlas/african-cmip6-ensembling/) |
 | Why is East African rainfall a special case? | [East African Paradox](/wikis/aaa-atlas/east-african-paradox/) |
 | What's coming next? | [CMIP7 + CORDEX-Africa](/wikis/aaa-atlas/future-projections/) |
+
+## Further reading
+
+- [IPCC AR6 WGI Chapter 1 — Framing, context, methods](https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-1/) — the canonical reference for what climate projections are and aren't.
+- [IPCC AR6 Interactive Atlas](https://interactive-atlas.ipcc.ch/) — region-by-region projection viewer; explore SSP bands for any AR6 reference region.
+- [WMO State of the Climate in Africa 2024](https://wmo.int/publication-series/state-of-climate-africa-2024) — the most authoritative observational baseline for continental and regional change.
+- [Hawkins & Sutton 2009 — The potential to narrow uncertainty in regional climate projections](https://doi.org/10.1175/2009BAMS2607.1) — the original framing of the three uncertainty sources.
+- [Carbon Brief — How Shared Socioeconomic Pathways explore future climate change](https://www.carbonbrief.org/explainer-how-shared-socioeconomic-pathways-explore-future-climate-change/) — non-specialist orientation to SSPs.
+- [Carbon Brief — CMIP6: the next generation of climate models explained](https://www.carbonbrief.org/cmip6-the-next-generation-of-climate-models-explained/) — what changed from CMIP5 to CMIP6 and why it matters.

@@ -253,7 +253,20 @@ We're seeking 2–3 paragraph contributions from National Meteorological Service
 
 **Walker Circulation** — the equatorial Pacific east-west atmospheric circulation that connects sea-surface temperature patterns to remote rainfall. The mechanism implicated in the East African Paradox.
 
-## References and further reading
+## Further reading
+
+If you read only six things to orient yourself before going deeper:
+
+- [Hausfather et al. 2022 — Recognize the 'hot model' problem](https://doi.org/10.1038/d41586-022-01192-2) — the *Nature* commentary that reshaped how CMIP6 ensembles are used for impacts.
+- [Iturbide et al. 2020 — AR6 reference regions](https://doi.org/10.5194/essd-12-2959-2020) — the regions our sub-ensembles are organised around.
+- [Samuel et al. 2025 — NEX-GDDP-CMIP6 evaluation for sub-Saharan Africa](https://doi.org/10.1002/joc.8672) — the evaluation paper that anchors the regional sub-ensemble choices.
+- [Park et al. 2023 — CMIP6 Horn of Africa biases](https://doi.org/10.1007/s00382-022-06622-5) — the regional study behind the East African paradox caveat.
+- [IPCC AR6 Interactive Atlas](https://interactive-atlas.ipcc.ch/) — explore AR6 multi-model projections by region without ingesting raw data.
+- [WCRP CMIP7 Fast Track](https://wcrp-cmip.org/cmip-phases/cmip7/fast-track/) — what's coming after CMIP6.
+
+The full reference list — including regional evaluations, paradox literature, forward-look pointers, and data sources — follows below.
+
+## References
 
 ### Foundation references
 
