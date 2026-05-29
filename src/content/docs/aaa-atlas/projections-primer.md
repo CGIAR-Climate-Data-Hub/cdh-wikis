@@ -34,7 +34,7 @@ Projections are **not predictions**. A prediction would assume we know which sce
 
 ## Where projections come from — the short version
 
-Projections come from **global climate models** ([GCMs](/wikis/aaa-atlas/glossary/)) — large physics-based simulations run at major modelling centres around the world. CMIP6, the current coordinated experiment, gathered runs from ~50 models; the Atlas ingests 18 of them via NASA's statistically-downscaled NEX-GDDP-CMIP6 product. The next page goes deep: [Climate models 101](/wikis/aaa-atlas/climate-models-101/).
+Projections come from **global climate models** ([GCMs](/wikis/aaa-atlas/glossary/)) — large physics-based simulations run at major modelling centres around the world. CMIP6, the current coordinated experiment, gathered runs from ~50 models. NASA's statistically-downscaled **NEX-GDDP-CMIP6** product provides 18 of them at 0.25° resolution; this is the most widely used dataset for African projection work, and it's the one the AAA Adaptation Atlas's *Build a Climate Rationale* notebook is built around (see [African CMIP6 Ensembling](/wikis/aaa-atlas/african-cmip6-ensembling/) for which 18 models and why). The next page goes deep on what a GCM actually is: [Climate models 101](/wikis/aaa-atlas/climate-models-101/).
 
 ## The three sources of uncertainty
 
@@ -83,7 +83,7 @@ Projections sit in part (3), but always read alongside (1) and (2) — a project
 | What does "bias-corrected" mean? | [Bias correction](/wikis/aaa-atlas/bias-correction/) |
 | Which datasets exist and what should I use? | [Dataset landscape](/wikis/aaa-atlas/dataset-landscape/) |
 | Which models work best over my region? | [Regional evaluation](/wikis/aaa-atlas/regional-evaluation/) |
-| What does the Atlas specifically use? | [Atlas approach](/wikis/aaa-atlas/african-cmip6-ensembling/) |
+| What does the AAA Adaptation Atlas specifically use? | [African CMIP6 Ensembling](/wikis/aaa-atlas/african-cmip6-ensembling/) |
 | Why is East African rainfall a special case? | [East African Paradox](/wikis/aaa-atlas/east-african-paradox/) |
 | What's coming next? | [CMIP7 + CORDEX-Africa](/wikis/aaa-atlas/future-projections/) |
 

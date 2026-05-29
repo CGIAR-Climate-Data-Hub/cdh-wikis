@@ -1,0 +1,53 @@
+<svg viewBox="0 0 820 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t1 d1" preserveAspectRatio="xMidYMid meet">
+<title id="t1">The three baselines you'll meet</title>
+<desc id="d1">A horizontal timeline from 1850 to 2100 showing the three climate reference periods used in African adaptation work as coloured bars. The 1850 to 1900 IPCC pre-industrial baseline sits at the far left, spanning 50 years. The 1991 to 2020 WMO observational baseline and the 1995 to 2014 CMIP6 projection baseline both sit near the right of the chart and overlap each other by 20 years. A vertical dashed line at 2026 marks today. The figure makes visible that the WMO and CMIP6 baselines are close in time but the IPCC pre-industrial baseline is far back, and that the WMO and CMIP6 windows are similar but not identical.</desc>
+
+<g stroke="#D3D1C7" stroke-width="0.5">
+<line x1="208" y1="60" x2="208" y2="220"/>
+<line x1="336" y1="60" x2="336" y2="220"/>
+<line x1="464" y1="60" x2="464" y2="220"/>
+<line x1="592" y1="60" x2="592" y2="220"/>
+</g>
+
+<rect x="80" y="80" width="128" height="28" fill="#F5C4B3" stroke="#993C1D" stroke-width="1"/>
+
+<rect x="441" y="130" width="76" height="28" fill="#B5D4F4" stroke="#185FA5" stroke-width="1"/>
+
+<rect x="451" y="180" width="49" height="28" fill="#FAC775" stroke="#BA7517" stroke-width="1"/>
+
+<line x1="531" y1="60" x2="531" y2="220" stroke="#5F5E5A" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="531" y="52" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#5F5E5A" text-anchor="middle">today (2026)</text>
+
+<line x1="80" y1="220" x2="720" y2="220" stroke="#2C2C2A" stroke-width="1"/>
+
+<g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#5F5E5A" text-anchor="middle">
+<text x="80" y="238">1850</text>
+<text x="208" y="238">1900</text>
+<text x="336" y="238">1950</text>
+<text x="464" y="238">2000</text>
+<text x="592" y="238">2050</text>
+<text x="720" y="238">2100</text>
+</g>
+
+<g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#4A1B0C">
+<text x="86" y="99" font-weight="500">1850–1900</text>
+<text x="86" y="113" font-size="11">IPCC pre-industrial anchor</text>
+</g>
+
+<g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#2C2C2A">
+<text x="535" y="143" font-weight="500" fill="#0C447C">1991–2020 — WMO observational normal</text>
+<text x="535" y="157" font-size="11" fill="#5F5E5A">used by WMO reports, this wiki, CGIAR observational reporting</text>
+</g>
+
+<g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#2C2C2A">
+<text x="535" y="193" font-weight="500" fill="#412402">1995–2014 — CMIP6 reference period</text>
+<text x="535" y="207" font-size="11" fill="#5F5E5A">used by CMIP6 experiments and NEX-GDDP-CMIP6 projections</text>
+</g>
+
+<g stroke="#5F5E5A" stroke-width="0.75" fill="none">
+<path d="M 144 108 Q 144 130 200 270"/>
+</g>
+<text x="205" y="275" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#5F5E5A">~0.85 °C of observed warming separates the IPCC pre-industrial anchor from the modern baselines</text>
+
+<text x="60" y="55" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#5F5E5A" text-anchor="end">year</text>
+</svg>

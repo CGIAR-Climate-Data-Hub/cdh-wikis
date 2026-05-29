@@ -67,7 +67,7 @@ For projecting climate change relative to that baseline.
 
 For deciding which subset of climate models to use.
 
-- **Continental work across Africa**: use **AFR-13** (continental sub-ensemble, hot-models excluded) per the [Atlas approach](/wikis/aaa-atlas/african-cmip6-ensembling/), grounded in [Samuel et al. 2025](https://doi.org/10.1002/joc.8672).
+- **Continental work across Africa**: use **AFR-13** (continental sub-ensemble, hot-models excluded) per the [AAA Adaptation Atlas methodology](/wikis/aaa-atlas/african-cmip6-ensembling/), grounded in [Samuel et al. 2025](https://doi.org/10.1002/joc.8672).
 - **Single-region work**: use the **regional sub-ensemble** matching your region (AFR-WAF for West Africa, AFR-HOA for the Greater Horn, AFR-SAF for Southern Africa, etc.). See [Regional evaluation](/wikis/aaa-atlas/regional-evaluation/).
 - **Stress-testing / worst-case framing only**: use **FULL-18** (all 18 NEX-GDDP-CMIP6 models including hot tail) — and explicitly state that you're including hot models for stress-testing per [Hausfather et al. 2022](https://doi.org/10.1038/d41586-022-01192-2). Don't use FULL-18 silently for central estimates.
 
@@ -110,7 +110,7 @@ The Climate Data Hub is consolidating these recommendations into **accessible da
 
 The mile markers along this arc:
 
-1. **Today (2026 mid-year)**: Recommendations as text. Adaptation Atlas as the de-facto reference implementation for projections. Wiki is the harmonisation source of truth.
+1. **Today (2026 mid-year)**: Recommendations as text. The AAA Adaptation Atlas and its *Build a Climate Rationale* notebook serve as the de-facto reference implementation for projections. This wiki is the harmonisation source of truth.
 2. **2026 Q4 — 2027 Q1**: Climate Data Hub v1 launches with the canonical projection products (NEX-GDDP-CMIP6 ensemble subsets at country, sub-national, and AR6-region resolutions). CHIRPS / CHIRTS observational products served alongside.
 3. **2027 — 2028**: CMIP7 Fast Track products land. The Climate Data Hub publishes a CMIP6→CMIP7 transition guide so partners can compare across generations without re-baselining.
 4. **2028+**: Recommendations become defaults *by construction* — the canonical product is the only one you can pull from the Climate Data Hub, so deviation requires going outside the platform (which is a meaningful flag in itself).
@@ -125,7 +125,7 @@ Centre-level climate-data contacts will be listed here as the network solidifies
 
 ## Further reading
 
-- [African CMIP6 Ensembling — the Atlas approach](/wikis/aaa-atlas/african-cmip6-ensembling/) — the methodology these recommendations apply.
+- [African CMIP6 Ensembling — the AAA Adaptation Atlas approach](/wikis/aaa-atlas/african-cmip6-ensembling/) — the methodology these recommendations apply.
 - [Baselines and reference periods](/wikis/aaa-atlas/baselines/) — the baseline asymmetry between observed and projected products explained.
 - [Samuel et al. 2025 — NEX-GDDP-CMIP6 evaluation for sub-Saharan Africa](https://doi.org/10.1002/joc.8672) — the evaluation paper behind the AFR-13 sub-ensemble.
 - [Hausfather et al. 2022 — Recognize the 'hot model' problem](https://doi.org/10.1038/d41586-022-01192-2) — the basis for hot-model exclusion in the ensemble defaults.

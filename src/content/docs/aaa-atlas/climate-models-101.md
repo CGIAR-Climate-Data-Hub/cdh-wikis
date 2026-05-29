@@ -24,7 +24,7 @@ A non-specialist explanation of what climate models are, who builds them, what's
 - How modern Earth System Models differ from the original coupled atmosphere-ocean models
 - Why ~50 modelling centres each build their own model — and why that's deliberate
 - What the CMIP coordination framework does, and why it makes multi-model ensembles possible
-- Which 18 models sit behind the Atlas's projections, and where to find the deep dive on how the Atlas chooses among them
+- Which 18 models sit behind NASA's NEX-GDDP-CMIP6 product (the dataset that powers most African projection work, including the AAA Adaptation Atlas), and where to find the deep dive on how those 18 are sub-ensembled for African regions
 
 ## What is a Global Climate Model?
 
@@ -59,7 +59,7 @@ Modern ESMs go further. They add:
 - **Atmospheric chemistry** — aerosols, ozone, reactive nitrogen
 - **Ice sheet dynamics** — in the most advanced configurations
 
-The naming convention in CMIP6 model IDs is inconsistent: models with "ESM" in their name (like GFDL-ESM4 or ACCESS-ESM1-5) are explicitly ESMs, while others (MIROC6, NorESM2-LM) are technically AOGCMs or hybrid configurations. For the temperature and precipitation variables the Atlas ingests, the atmosphere-ocean physics core dominates, and the distinction has little practical effect on the projections you cite ([Flato et al. 2013](https://www.ipcc.ch/site/assets/uploads/2018/02/WG1AR5_Chapter09_FINAL.pdf)). It matters most when a study is examining land-cover feedbacks or ocean carbon uptake.
+The naming convention in CMIP6 model IDs is inconsistent: models with "ESM" in their name (like GFDL-ESM4 or ACCESS-ESM1-5) are explicitly ESMs, while others (MIROC6, NorESM2-LM) are technically AOGCMs or hybrid configurations. For the temperature and precipitation variables that downstream products like NEX-GDDP-CMIP6 ingest, the atmosphere-ocean physics core dominates, and the distinction has little practical effect on the projections you cite ([Flato et al. 2013](https://www.ipcc.ch/site/assets/uploads/2018/02/WG1AR5_Chapter09_FINAL.pdf)). It matters most when a study is examining land-cover feedbacks or ocean carbon uptake.
 
 ## Why there are so many
 
@@ -69,7 +69,7 @@ Every major national meteorological research institute builds and maintains its 
 
 Each centre also makes its own choices in **model tuning**: adjusting free parameters in the parameterisation schemes until the model's historical simulation (roughly 1850–2014) reproduces observed temperature, radiative balance, and sea ice with acceptable accuracy ([Hourdin et al. 2017](https://doi.org/10.1175/BAMS-D-15-00135.1)). Tuning is part science, part judgement. A team that prioritises matching global mean temperature will make different parameter choices from a team prioritising regional precipitation patterns — even if both start from the same underlying physics equations.
 
-Different tuning choices lead to different **equilibrium climate sensitivities (ECS)**: how much the model's global mean temperature rises per doubling of atmospheric CO₂. Across CMIP6, the ECS range runs from about 1.8 °C to over 5 °C, compared to the AR6-assessed very-likely range of 2.5–4.0 °C. Models with ECS well above that assessed range — often called **"hot models"** — tend to produce implausibly rapid warming under high-emissions scenarios ([Hausfather et al. 2022](https://doi.org/10.1038/d41586-022-01192-2)). This is a known issue in CMIP6, and the Atlas's default ensemble handles it by excluding the most extreme outliers. Full reasoning is in [African CMIP6 Ensembling](/wikis/aaa-atlas/african-cmip6-ensembling/).
+Different tuning choices lead to different **equilibrium climate sensitivities (ECS)**: how much the model's global mean temperature rises per doubling of atmospheric CO₂. Across CMIP6, the ECS range runs from about 1.8 °C to over 5 °C, compared to the AR6-assessed very-likely range of 2.5–4.0 °C. Models with ECS well above that assessed range — often called **"hot models"** — tend to produce implausibly rapid warming under high-emissions scenarios ([Hausfather et al. 2022](https://doi.org/10.1038/d41586-022-01192-2)). This is a known issue in CMIP6, and serious African projection work — including the AAA Adaptation Atlas's default ensemble — handles it by excluding the most extreme outliers. Full reasoning is in [African CMIP6 Ensembling](/wikis/aaa-atlas/african-cmip6-ensembling/).
 
 Having ~50 independent models is the community's way of sampling the distribution of plausible futures that different modelling choices imply. It's not that one model is right and the others are wrong. Genuine scientific uncertainty about cloud feedbacks, ocean mixing, and atmospheric chemistry means there are multiple defensible representations of the climate system. The multi-model ensemble mean reflects what the community, as a whole, considers most likely; the ensemble spread captures what remains genuinely unknown.
 
@@ -88,9 +88,9 @@ Model outputs are archived in the **Earth System Grid Federation (ESGF)** — a 
 
 CMIP is not a single experiment but an umbrella for dozens of **Model Intercomparison Projects (MIPs)** — HighResMIP (high-resolution runs), ScenarioMIP (the standard future-scenario runs), LS3MIP (land surface), and CORDEX (regional downscaling, coordinated separately). CMIP7, the next generation, is now entering its first phases: see [CMIP7 + CORDEX-Africa](/wikis/aaa-atlas/future-projections/) for what's coming.
 
-## The 18 models behind the Atlas
+## The 18 models behind NEX-GDDP-CMIP6
 
-The Atlas doesn't pull directly from the raw CMIP6 archive. It uses NASA's **NEX-GDDP-CMIP6** dataset ([Thrasher et al. 2022](https://doi.org/10.1038/s41597-022-01393-4)), which statistically downscales CMIP6 output to a 0.25° grid (~25 km spacing) using a bias-corrected spatial disaggregation (BCSD) method. That downscaling is what makes the projections fine enough to use at the country and sub-national scale in Africa.
+Most African projection work — including the **AAA Adaptation Atlas** and its *Build a Climate Rationale* notebook — doesn't pull directly from the raw CMIP6 archive. It uses NASA's **NEX-GDDP-CMIP6** dataset ([Thrasher et al. 2022](https://doi.org/10.1038/s41597-022-01393-4)), which statistically downscales CMIP6 output to a 0.25° grid (~25 km spacing) using a bias-corrected spatial disaggregation (BCSD) method. That downscaling is what makes the projections fine enough to use at the country and sub-national scale in Africa.
 
 NASA's original NEX-GDDP-CMIP6 release covered 18 models from institutions across four continents:
 
@@ -115,7 +115,7 @@ NASA's original NEX-GDDP-CMIP6 release covered 18 models from institutions acros
 | NorESM2-MM | NCC | Norway |
 | TaiESM1 | AS-RCEC | Taiwan |
 
-Not all 18 are used equally. The Atlas applies **regionally-tuned sub-ensembles** that drop models with documented weaknesses over specific African regions or with ECS outside the AR6-assessed likely range. Which models get dropped, why, which regions use which sub-ensembles, and how to override the defaults are all covered in [African CMIP6 Ensembling](/wikis/aaa-atlas/african-cmip6-ensembling/).
+Not all 18 are used equally in serious African work. The **AAA Adaptation Atlas** applies **regionally-tuned sub-ensembles** that drop models with documented weaknesses over specific African regions or with ECS outside the AR6-assessed likely range. Which models get dropped, why, which regions use which sub-ensembles, and how to override the defaults are all covered in [African CMIP6 Ensembling](/wikis/aaa-atlas/african-cmip6-ensembling/).
 
 <figure>
 <img src="./figures/F16-cmip6-institutes-map.png" alt="World map with dots marking the locations of the 18 NEX-GDDP-CMIP6 modelling institutes, spread across Australia, Europe, North America, Russia, East Asia, and Taiwan.">
