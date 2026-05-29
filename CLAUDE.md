@@ -4,11 +4,14 @@ This repo is the staging + publishing area for the **CGIAR Climate Data Hub wiki
 
 If you're reading this as Claude Code, this file gives you the conventions you need to add content correctly. There is also a longer human-facing guide at `playbook/ADDING_A_NEW_WIKI.md`.
 
+**Visual style for figures and per-page conventions** (palette, axes, callouts, Further reading sections, baseline convention) live in `STYLE.md` — read it before commissioning a figure or before writing a page.
+
 ## Repository layout
 
 ```
 wikis/
 ├── CLAUDE.md                       ← this file
+├── STYLE.md                        ← visual + per-page style guide
 ├── README.md                       ← human-facing landing
 ├── astro.config.mjs                ← site config, sidebar, base URL
 ├── package.json
