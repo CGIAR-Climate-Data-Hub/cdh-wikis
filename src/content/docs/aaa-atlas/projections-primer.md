@@ -57,6 +57,11 @@ If multiple emissions scenarios are shown, each one gets its own coloured mean-a
 
 If a chart shows **only the mean and not the spread**, half the story is missing — treat it with caution and look for the source's underlying data. Honest charts always include the spread.
 
+<figure>
+<img src="./figures/F-projection-chart-anatomy.png" alt="Annotated time-series chart showing two SSP scenario bands from 2020 to 2100. Each band has a thick central line (ensemble mean) and a shaded envelope (inter-model spread). The bands overlap near-term and diverge after 2050. Labels point to: ensemble mean, inter-model spread, scenario uncertainty, and near-term overlap zone.">
+<figcaption><strong>Figure 1.</strong> Anatomy of a multi-model projection chart. Each coloured band represents one emissions scenario: the thick line is the ensemble mean across models; the shading is the inter-model spread (typically the 17–83 % range). Near-term bands overlap because internal variability dominates; end-of-century bands diverge as scenario choice becomes the largest source of uncertainty. placeholder — to be commissioned</figcaption>
+</figure>
+
 ## Where this fits in a climate rationale
 
 A defensible climate rationale for a Green Climate Fund concept note, an Adaptation Fund proposal, or a national NAP submission usually has four parts:
