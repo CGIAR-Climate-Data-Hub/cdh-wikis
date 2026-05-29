@@ -128,12 +128,35 @@ Every chart that shows a temperature or precipitation anomaly **must name its ba
 
 | Context | Baseline | Why |
 |---|---|---|
-| Wiki projection figures | **1991–2020 (WMO observational)** | Matches the baseline used in [WMO State of the Climate in Africa](https://wmo.int/publication-series/state-of-climate-africa-2024) and the Atlas's Recent Changes view; the most familiar anchor for the wiki's partner audience. |
+| Wiki projection figures | **1991–2020 (WMO observational)** | Matches the baseline used in [WMO State of the Climate in Africa](https://wmo.int/publication-series/state-of-climate-africa-2024); the most familiar anchor for the wiki's partner audience. |
 | Wiki recent-change figures | 1991–2020 (WMO observational) | Same. |
 | Re-used IPCC AR6 figures | 1850–1900 (IPCC pre-industrial) | Don't re-baseline IPCC figures — keep the original anchor and explain the offset in the caption. |
-| Atlas internal Future Projections data layer | **1995–2014 (CMIP6/AR6 reference)** | Per `project_cr_baseline_conventions` — the Atlas notebook uses the CMIP6 standard reference period; this asymmetry vs the wiki figures is **intentional**. See [baselines.md](src/content/docs/aaa-atlas/baselines.md) (when authored) for the full explanation. |
+| CMIP6-derived projection data products (NEX-GDDP-CMIP6, CHELSA-CMIP6, etc.) — including those underpinning the AAA Adaptation Atlas's Future Projections view | **1995–2014 (CMIP6/AR6 reference)** | The CMIP6 standard reference period — upstream products are anchored here by construction. The asymmetry with the wiki's 1991–2020 figures is **intentional** — see [`src/content/docs/aaa-atlas/baselines.md`](src/content/docs/aaa-atlas/baselines.md) for the full explanation. |
 
 The ~0.85 °C offset between 1850–1900 and 1995–2014 is documented in IPCC AR6 WGI SPM Box SPM.1. The offset between 1991–2020 and 1995–2014 is small (a few hundredths of a degree) and not always material — but always name your baseline so a reader can convert if they need to.
+
+## Naming conventions — don't use generic terms for specific tools
+
+The wikis are standalone reference content. A reader landing on a page does not necessarily know the context, the contributing institution, or the named tools the page references. Generic terms confuse them.
+
+- **Don't write "the Atlas"** — there are dozens of climate atlases (IPCC Interactive Atlas, World Bank Climate Knowledge Atlas, CMIP6 atlases, etc.). Always use the full name **"AAA Adaptation Atlas"** on first reference and where disambiguation is needed.
+- **Don't write "the notebook"** — say **"AAA Adaptation Atlas's *Build a Climate Rationale* notebook"** or whichever notebook you mean.
+- **Don't write "the Hub"** — say **"CGIAR Climate Data Hub"**.
+- **Don't write "the Centre"** — name the centre (Alliance Bioversity-CIAT, IFPRI, ILRI, etc.).
+
+A short colloquial reference is acceptable *after* the full name has appeared in the same section, but never in headings, captions, or alt text — those frequently appear out of context (in search results, sidebars, link previews) and must stand alone.
+
+## Figure production tools
+
+For commissioning or producing figures that follow this style guide, the recommended tools, in increasing order of polish:
+
+- **Hand-coded SVG** (what the interim schematics use) — fastest; renders consistently across browsers; small file size; easy for future contributors to maintain. Best for diagrams that need to follow the palette exactly.
+- **[Claude Design](https://claude.ai/design)** (Anthropic Labs research preview, CIAT org has access) — for figures that need a visual-design pass beyond what hand-coded SVG gives. Produces polished SVGs that follow a coherent design system. The CIAT org has this enabled; use it when an interim schematic needs to become a publishable figure.
+- **NotebookLM** — for *infographic* generation from source materials (e.g. a long PDF or a set of figures). Best when the figure needs to *summarise* content rather than *render* data. Use sparingly — its figures don't always follow our palette.
+- **Adobe Illustrator / Inkscape** — for figures that need precise annotation over a base image (e.g. adapting an IPCC SPM panel with custom callouts). Slowest path but most control.
+- **Matplotlib / ggplot / Plotly (static export)** — for figures that need to plot real data exactly. Always export as SVG or PNG; never embed interactive output.
+
+Whichever tool you use, the rules in [Visual style for figures](#visual-style-for-figures) above are non-negotiable. The tool is the means; the style is the end.
 
 ## Things to avoid
 
