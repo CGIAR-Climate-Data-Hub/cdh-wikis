@@ -97,6 +97,11 @@ export default defineConfig({
               slug: 'aaa-atlas/african-cmip6-ensembling',
             },
             {
+              label: 'Recommendations for CGIAR',
+              slug: 'aaa-atlas/cgiar-recommendations',
+              badge: { text: 'draft', variant: 'caution' },
+            },
+            {
               label: 'East African Paradox',
               slug: 'aaa-atlas/east-african-paradox',
               badge: { text: 'draft', variant: 'caution' },
