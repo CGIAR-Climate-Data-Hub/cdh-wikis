@@ -12,6 +12,11 @@ tableOfContents:
   maxHeadingLevel: 3
 ---
 
+<figure>
+<img src="/wikis/figures/F-africa-warming-stripes-hero.svg" alt="Animated warming-stripes chart showing African continental annual temperature anomaly from 1880 to 2025 relative to the 1991–2020 baseline. Each vertical stripe represents one year, coloured from deep blue for cool anomalies through neutral whites to dark red for warm anomalies. The stripes wipe in from left to right over the first six seconds of the animation, revealing the gradual transition from blue early-twentieth-century stripes through neutral mid-century stripes to increasingly red stripes from the 1980s onward. By 2025 the rightmost stripes are deep red." />
+<figcaption>Africa is warming. Each stripe is one year of continental annual temperature anomaly, 1880–2025, relative to the 1991–2020 baseline. Style inspired by Ed Hawkins's <a href="https://showyourstripes.info/">#ShowYourStripes</a>. Data: NASA GISTEMP v4 tropical band (24°S–24°N), 1991–2020 baseline. <a href="https://data.giss.nasa.gov/gistemp/">data.giss.nasa.gov/gistemp</a>. See <a href="https://github.com/CGIAR-Climate-Data-Hub/wikis/blob/main/playbook/cmip6-wiki/figure-commissions/F-africa-warming-stripes-hero.md">commission brief</a> for methodology. Regenerate with <code>scripts/regen-warming-stripes.py</code> (switches to Berkeley Earth Africa land data automatically when their server is reachable).</figcaption>
+</figure>
+
 :::tip[If you remember one thing]
 A climate projection isn't a forecast of what will happen. It's a model's answer to "*if emissions follow trajectory X, here's what the physics says could happen.*" The honest reading of any projection chart is always: **which scenario, which models, and how much do they agree** — not a single number.
 :::
