@@ -158,6 +158,14 @@ h1.page-title {
   color: var(--cdh-primary-light);   /* #E2E0DF — warm off-white, high contrast on deep green */
 }
 
+/* Sidebar group label contrast — Starlight's .large uses var(--sl-color-white)
+   which our dark-mode palette maps to #1D1D1D (near-black), making group labels
+   invisible on the #02211A sidebar background. Force off-white explicitly. */
+:root[data-theme='dark'] .group-label .large,
+:root[data-theme='dark'] .group-label span {
+  color: var(--cdh-grey-2);   /* #C6C4C3 — slightly muted vs heading white, readable */
+}
+
 /* Subtle: links pick up the accent ramp + lift on hover */
 .sl-markdown-content a,
 .sl-link-card a {
