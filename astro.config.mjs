@@ -71,84 +71,115 @@ export default defineConfig({
           items: [
             { label: 'Overview', slug: 'aaa-atlas' },
             {
-              label: 'Projections primer',
-              slug: 'aaa-atlas/projections-primer',
+              label: 'Foundations',
+              collapsed: false,
+              items: [
+                { label: 'Projections primer', slug: 'aaa-atlas/projections-primer' },
+                { label: 'Baselines', slug: 'aaa-atlas/baselines' },
+                {
+                  label: 'Climate models 101',
+                  slug: 'aaa-atlas/climate-models-101',
+                  badge: { text: 'draft', variant: 'caution' },
+                },
+              ],
             },
             {
-              label: 'Baselines',
-              slug: 'aaa-atlas/baselines',
+              label: 'Why models differ',
+              collapsed: true,
+              items: [
+                {
+                  label: 'Why models disagree',
+                  slug: 'aaa-atlas/why-models-disagree',
+                  badge: { text: 'draft', variant: 'caution' },
+                },
+                {
+                  label: 'Downscaling',
+                  slug: 'aaa-atlas/downscaling',
+                  badge: { text: 'draft', variant: 'caution' },
+                },
+                {
+                  label: 'Bias correction',
+                  slug: 'aaa-atlas/bias-correction',
+                  badge: { text: 'draft', variant: 'caution' },
+                },
+              ],
             },
             {
-              label: 'Climate models 101',
-              slug: 'aaa-atlas/climate-models-101',
-              badge: { text: 'draft', variant: 'caution' },
+              label: 'Datasets & Africa evaluation',
+              collapsed: true,
+              items: [
+                {
+                  label: 'Dataset landscape',
+                  slug: 'aaa-atlas/dataset-landscape',
+                  badge: { text: 'draft', variant: 'caution' },
+                },
+                {
+                  label: 'Regional evaluation',
+                  slug: 'aaa-atlas/regional-evaluation',
+                  badge: { text: 'draft', variant: 'caution' },
+                },
+                { label: 'African CMIP6 Ensembling', slug: 'aaa-atlas/african-cmip6-ensembling' },
+                {
+                  label: 'East African Paradox',
+                  slug: 'aaa-atlas/east-african-paradox',
+                  badge: { text: 'draft', variant: 'caution' },
+                },
+              ],
             },
             {
-              label: 'Why models disagree',
-              slug: 'aaa-atlas/why-models-disagree',
-              badge: { text: 'draft', variant: 'caution' },
+              label: 'For CGIAR',
+              collapsed: false,
+              items: [
+                {
+                  label: 'Recommendations for CGIAR',
+                  slug: 'aaa-atlas/cgiar-recommendations',
+                  badge: { text: 'draft', variant: 'caution' },
+                },
+              ],
             },
             {
-              label: 'Downscaling',
-              slug: 'aaa-atlas/downscaling',
-              badge: { text: 'draft', variant: 'caution' },
+              label: 'CMIP7 & forward look',
+              collapsed: false,
+              items: [
+                {
+                  label: "What's next — CMIP7",
+                  slug: 'aaa-atlas/future-projections',
+                  badge: { text: 'draft', variant: 'caution' },
+                },
+                {
+                  label: 'Downscaling infrastructure',
+                  slug: 'aaa-atlas/cmip7-downscaling-infrastructure',
+                  badge: { text: 'scaffold', variant: 'caution' },
+                },
+                {
+                  label: 'Hazards pipeline',
+                  slug: 'aaa-atlas/cmip7-hazards-pipeline',
+                  badge: { text: 'scaffold', variant: 'caution' },
+                },
+              ],
             },
             {
-              label: 'Bias correction',
-              slug: 'aaa-atlas/bias-correction',
-              badge: { text: 'draft', variant: 'caution' },
+              label: 'Reference',
+              collapsed: false,
+              items: [
+                {
+                  label: 'Voices from the field',
+                  slug: 'aaa-atlas/voices',
+                  badge: { text: 'open call', variant: 'note' },
+                },
+                { label: 'Glossary', slug: 'aaa-atlas/glossary' },
+                { label: 'References', slug: 'aaa-atlas/references' },
+              ],
             },
+          ],
+        },
+        {
+          label: 'Methods and tools for adaptation tracking',
+          items: [
             {
-              label: 'Dataset landscape',
-              slug: 'aaa-atlas/dataset-landscape',
-              badge: { text: 'draft', variant: 'caution' },
-            },
-            {
-              label: 'Regional evaluation',
-              slug: 'aaa-atlas/regional-evaluation',
-              badge: { text: 'draft', variant: 'caution' },
-            },
-            {
-              label: 'African CMIP6 Ensembling',
-              slug: 'aaa-atlas/african-cmip6-ensembling',
-            },
-            {
-              label: 'Recommendations for CGIAR',
-              slug: 'aaa-atlas/cgiar-recommendations',
-              badge: { text: 'draft', variant: 'caution' },
-            },
-            {
-              label: 'East African Paradox',
-              slug: 'aaa-atlas/east-african-paradox',
-              badge: { text: 'draft', variant: 'caution' },
-            },
-            {
-              label: "What's next — CMIP7 + CORDEX",
-              slug: 'aaa-atlas/future-projections',
-              badge: { text: 'draft', variant: 'caution' },
-            },
-            {
-              label: 'CMIP7 — downscaling infrastructure',
-              slug: 'aaa-atlas/cmip7-downscaling-infrastructure',
-              badge: { text: 'scaffold', variant: 'caution' },
-            },
-            {
-              label: 'CMIP7 — hazards pipeline',
-              slug: 'aaa-atlas/cmip7-hazards-pipeline',
-              badge: { text: 'scaffold', variant: 'caution' },
-            },
-            {
-              label: 'Voices from the field',
-              slug: 'aaa-atlas/voices',
-              badge: { text: 'open call', variant: 'note' },
-            },
-            {
-              label: 'Glossary',
-              slug: 'aaa-atlas/glossary',
-            },
-            {
-              label: 'References',
-              slug: 'aaa-atlas/references',
+              label: 'Overview',
+              slug: 'adaptation-tracking',
+              badge: { text: 'coming soon', variant: 'note' },
             },
           ],
         },

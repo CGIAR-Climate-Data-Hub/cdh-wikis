@@ -18,23 +18,25 @@ hero:
       icon: external
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { LinkCard, Card, CardGrid } from '@astrojs/starlight/components';
 
-## What you'll find here
+:::caution[Development preview]
+This site is under active development. Content is being added and reviewed — pages marked **draft** or **scaffold** are works in progress and should not be cited in proposals yet. Pages marked with no badge or **validated** can be cited, but may still be updated. This is the CGIAR Climate Data Hub's development space; a stable partner-facing version will be signalled when content reaches full coverage.
+:::
 
-These wikis are partner-facing reference material from the [CGIAR Climate Action Climate Data Hub](https://climate-action.cgiar.org/). They sit between the primary scientific literature and the day-to-day tools — explaining *why* the Data Hub's climate-rationale workflows make the choices they make, so that the national meteorological services, regional research centres, and partner programmes who rely on those workflows can defensibly cite and trust them.
+## Wiki sections
 
 <CardGrid>
-  <Card title="Climate data for African adaptation" icon="open-book">
-    Reference wikis on choosing, reading, and citing climate data for African adaptation work — foundations (projections, baselines, climate models), the dataset landscape, regionally-tuned CMIP6 ensembles, and the conventions CGIAR centres should harmonise around.
-
-    [Browse the section →](/wikis/aaa-atlas/)
-  </Card>
-  <Card title="Contribute" icon="pencil">
-    Each wiki has an "Edit this page" link in the footer (GitHub). National Meteorological Services, regional research centres, and CGIAR partner teams are welcome to contribute regional perspectives or new reference pages.
-
-    [How to contribute →](/wikis/contributing/)
-  </Card>
+  <LinkCard
+    title="Climate data for African adaptation"
+    description="Choosing, reading, and citing climate data for African adaptation work — foundations, datasets, CMIP6 ensembles, and the conventions CGIAR centres should harmonise around."
+    href="/wikis/aaa-atlas/"
+  />
+  <LinkCard
+    title="Methods and tools for adaptation tracking"
+    description="Coming soon — methods and tools for measuring and evaluating climate adaptation outcomes."
+    href="/wikis/adaptation-tracking/"
+  />
 </CardGrid>
 
 ## Why this site exists
