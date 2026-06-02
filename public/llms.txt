@@ -1,0 +1,41 @@
+# CGIAR Climate Data Hub — Wikis
+
+> Reference wikis for climate-data methodology in African adaptation work. Written for proposal authors, NAP teams, and CGIAR programme designers who need defensible citations when choosing climate models, datasets, and projections.
+
+These wikis explain what climate models are, how they are selected for African regions, what datasets exist, and how to cite climate-data choices in proposals and reports. All content is anchored to peer-reviewed literature and grey-lit from regional climate bodies (IPCC, WMO, ICPAC, SADC-CSC, AGRHYMET).
+
+The wikis are published by the CGIAR Climate Data Hub and maintained by the Alliance Bioversity-CIAT climate team. They are designed to be citable at a specific version: each page carries a `version` field in its frontmatter, and old versions are retained in git history for citation stability.
+
+Base URL: https://cgiar-climate-data-hub.github.io/wikis/
+
+## Climate data for African adaptation
+
+- [Section overview](https://cgiar-climate-data-hub.github.io/wikis/aaa-atlas/): Purpose, audience, and index of all pages in this section.
+- [Climate projections for Africa — a 10-minute primer](https://cgiar-climate-data-hub.github.io/wikis/aaa-atlas/projections-primer/): What a climate projection is (and is not), the three sources of uncertainty (scenario / model / internal variability), how to read a projection chart honestly, and how projections fit into a GCF or Adaptation Fund climate rationale.
+- [Baselines and reference periods](https://cgiar-climate-data-hub.github.io/wikis/aaa-atlas/baselines/): The three baselines a reader will encounter — 1850–1900 (IPCC pre-industrial), 1991–2020 (WMO observational), 1995–2014 (CMIP6 / NEX-GDDP reference) — and why different tools use different ones.
+- [Climate models 101](https://cgiar-climate-data-hub.github.io/wikis/aaa-atlas/climate-models-101/): What a Global Climate Model (GCM) is, what physics runs inside it, the difference between an ESM and an AOGCM, why ~50 modelling centres each build their own model, what the CMIP framework does, and which 18 models sit behind NASA's NEX-GDDP-CMIP6 product.
+- [African CMIP6 Ensembling — the AAA Adaptation Atlas approach](https://cgiar-climate-data-hub.github.io/wikis/aaa-atlas/african-cmip6-ensembling/): Why per-region ensemble tuning matters, the AFR-13 / AFR-8 / FULL-18 ensemble options, the hot-model problem (CanESM5 exclusion), the East African Paradox, and what's coming from CMIP7 and CORDEX-Africa.
+- [Recommendations for CGIAR](https://cgiar-climate-data-hub.github.io/wikis/aaa-atlas/cgiar-recommendations/): Prescriptive defaults for CGIAR centres on observed-climate datasets, future-projection datasets, ensembles, and scenarios. Explicit do-nots.
+- [CMIP7 and future projections](https://cgiar-climate-data-hub.github.io/wikis/aaa-atlas/future-projections/): What is coming from CMIP7 and CORDEX-Africa, and how the wikis will be updated.
+- [Glossary](https://cgiar-climate-data-hub.github.io/wikis/aaa-atlas/glossary/): Definitions of key terms used across this section.
+- [References](https://cgiar-climate-data-hub.github.io/wikis/aaa-atlas/references/): Curated bibliography for the section.
+
+## Drafts in progress
+
+The following pages exist as structural stubs — content is being written:
+
+- Why models disagree (`/wikis/aaa-atlas/why-models-disagree/`)
+- Downscaling: from global to local (`/wikis/aaa-atlas/downscaling/`)
+- Bias correction explained (`/wikis/aaa-atlas/bias-correction/`)
+- The dataset landscape (`/wikis/aaa-atlas/dataset-landscape/`)
+- Evaluating models for Africa — regional evaluation (`/wikis/aaa-atlas/regional-evaluation/`)
+- The East African Paradox (`/wikis/aaa-atlas/east-african-paradox/`)
+- Voices from the field (`/wikis/aaa-atlas/voices/`)
+
+## About
+
+- [Contributing a wiki](https://cgiar-climate-data-hub.github.io/wikis/contributing/): How to add or edit a wiki page. Conventions, frontmatter schema, citation style.
+
+Maintainer: Pete Steward, Alliance Bioversity-CIAT (CGIAR) — p.steward@cgiar.org
+Source: https://github.com/CGIAR-Climate-Data-Hub/wikis
+Licence: content CC-BY-4.0 unless otherwise noted per page.
