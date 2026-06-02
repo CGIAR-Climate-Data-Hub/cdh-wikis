@@ -24,27 +24,131 @@ import { LinkCard, Card, CardGrid } from '@astrojs/starlight/components';
 This site is under active development. Content is being added and reviewed — pages marked **draft** or **scaffold** are works in progress and should not be cited in proposals yet. Pages marked with no badge or **validated** can be cited, but may still be updated. This is the CGIAR Climate Data Hub's development space; a stable partner-facing version will be signalled when content reaches full coverage.
 :::
 
-## Wiki sections
+## Climate data for African adaptation
+
+### Foundations
 
 <CardGrid>
   <LinkCard
-    title="Climate data for African adaptation"
-    description="Choosing, reading, and citing climate data for African adaptation work — foundations, datasets, CMIP6 ensembles, and the conventions CGIAR centres should harmonise around."
-    href="/wikis/aaa-atlas/"
+    title="Projections primer"
+    description="What a climate projection is and isn't; the three sources of uncertainty; how to read a projection chart honestly."
+    href="/wikis/aaa-atlas/projections-primer/"
   />
   <LinkCard
-    title="Methods and tools for adaptation tracking"
-    description="Coming soon — methods and tools for measuring and evaluating climate adaptation outcomes."
-    href="/wikis/adaptation-tracking/"
+    title="Baselines and reference periods"
+    description="What '+2 °C by 2050' actually means and which baseline it's relative to — and why different products use different ones."
+    href="/wikis/aaa-atlas/baselines/"
+  />
+  <LinkCard
+    title="Climate models 101"
+    description="What's inside a GCM, why there are ~50 of them, what the CMIP framework adds, and which 18 models sit behind the Atlas."
+    href="/wikis/aaa-atlas/climate-models-101/"
   />
 </CardGrid>
 
-## Why this site exists
+### Why models differ
 
-CGIAR Climate Action publishes climate-rationale tools that surface future-climate projections to people writing Green Climate Fund concept notes, Adaptation Fund proposals, NAP submissions, and research-for-development scenario briefs. Behind every chart in those tools sit dozens of methodology choices — which climate models, which scenarios, which downscaling product, which regional tuning — and those choices need to be **defensible to the partners who will cite them**.
+<CardGrid>
+  <LinkCard
+    title="Why models disagree"
+    description="Model uncertainty, structural spread, the hot-model problem, and constrained projections. Why the range is the signal, not the noise."
+    href="/wikis/aaa-atlas/why-models-disagree/"
+  />
+  <LinkCard
+    title="Downscaling"
+    description="Statistical vs dynamical downscaling; what NEX-GDDP-CMIP6 does; why 0.25° matters for Africa."
+    href="/wikis/aaa-atlas/downscaling/"
+  />
+  <LinkCard
+    title="Bias correction"
+    description="What 'bias corrected' means, how to trust it, and when not to."
+    href="/wikis/aaa-atlas/bias-correction/"
+  />
+</CardGrid>
 
-The first body of reference material here covers [climate data for African adaptation](/wikis/aaa-atlas/) — what a projection is and isn't, which baselines to use when, how CMIP6 ensembles are chosen and regionally tuned, what the dataset landscape looks like, and the conventions CGIAR centres should harmonise around. Implementation experience comes from operational tools including the [AAA Adaptation Atlas](https://adaptationatlas.cgiar.org/)'s *Build a Climate Rationale* notebook, but the answers — *which ensembles defensibly work for each African region, what the baseline asymmetry between observational and projection products means, what to do about the East African paradox* — apply to any African climate-rationale work using CMIP6. Further wikis in other domains will follow.
+### Datasets and Africa-specific evaluation
 
-## About this site
+<CardGrid>
+  <LinkCard
+    title="Dataset landscape"
+    description="Every major climate-projection dataset for African work — what each is best for, what its limitations are, where to get it."
+    href="/wikis/aaa-atlas/dataset-landscape/"
+  />
+  <LinkCard
+    title="Evaluating models for Africa"
+    description="What the peer-reviewed literature says about CMIP6 model performance across African sub-regions."
+    href="/wikis/aaa-atlas/regional-evaluation/"
+  />
+  <LinkCard
+    title="African CMIP6 Ensembling"
+    description="The regionally-tuned ensemble methodology the AAA Adaptation Atlas applies — AFR-13, AFR-8, FULL-18, and per-region sub-ensembles."
+    href="/wikis/aaa-atlas/african-cmip6-ensembling/"
+  />
+  <LinkCard
+    title="East African Paradox"
+    description="What to do when models project rainfall trends opposite to observations over the Greater Horn of Africa."
+    href="/wikis/aaa-atlas/east-african-paradox/"
+  />
+</CardGrid>
 
-Authoring happens here in plain Markdown (with optional MDX for richer components); the site is built with [Astro Starlight](https://starlight.astro.build/) and deployed to GitHub Pages on every push to `main`. Source of truth varies per wiki — some are drafted in their originating CGIAR programme's repository and synced here; others are authored directly. Each page's frontmatter makes the source explicit.
+### For CGIAR
+
+<CardGrid>
+  <LinkCard
+    title="Recommendations for CGIAR"
+    description="Prescriptive defaults for CGIAR centres on datasets, baselines, ensembles, and scenarios. Where the Climate Data Hub fits."
+    href="/wikis/aaa-atlas/cgiar-recommendations/"
+  />
+</CardGrid>
+
+### CMIP7 and forward look
+
+<CardGrid>
+  <LinkCard
+    title="What's next — CMIP7 + CORDEX-Africa"
+    description="What's coming after CMIP6, the new H/M/L scenario framework, the downscaling ecosystem, and what to do in the meantime."
+    href="/wikis/aaa-atlas/future-projections/"
+  />
+  <LinkCard
+    title="CMIP7 downscaling infrastructure"
+    description="Methods, compute, and data-sharing for a CGIAR-led African-tuned CMIP7 downscaled dataset. Lead: Carlos Navarros."
+    href="/wikis/aaa-atlas/cmip7-downscaling-infrastructure/"
+  />
+  <LinkCard
+    title="CMIP7 hazards pipeline"
+    description="The downstream hazards-indicator pipeline that feeds the AAA Adaptation Atlas. Leads: Pete Steward, Harold Achicanoy, Brayden Youngberg."
+    href="/wikis/aaa-atlas/cmip7-hazards-pipeline/"
+  />
+</CardGrid>
+
+### Reference
+
+<CardGrid>
+  <LinkCard
+    title="Glossary"
+    description="Every defined term used across the climate-data section, in one place."
+    href="/wikis/aaa-atlas/glossary/"
+  />
+  <LinkCard
+    title="References"
+    description="Master bibliography — all cited papers, datasets, and grey literature."
+    href="/wikis/aaa-atlas/references/"
+  />
+  <LinkCard
+    title="Voices from the field"
+    description="Partner perspectives from regional meteorological services and research centres. Open call for contributions."
+    href="/wikis/aaa-atlas/voices/"
+  />
+</CardGrid>
+
+---
+
+## Methods and tools for adaptation tracking
+
+<CardGrid>
+  <LinkCard
+    title="Overview — coming soon"
+    description="Methods and tools for measuring and evaluating climate adaptation outcomes. Section in planning."
+    href="/wikis/adaptation-tracking/"
+  />
+</CardGrid>
