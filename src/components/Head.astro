@@ -1,0 +1,56 @@
+---
+/**
+ * Custom Head component — extends Starlight's default head with
+ * schema.org JSON-LD structured data (TechArticle) for each wiki page.
+ *
+ * Starlight places this component's output directly inside <head>, so
+ * the <script type="application/ld+json"> below is valid in context.
+ */
+import Default from '@astrojs/starlight/components/Head.astro';
+import type { Props } from '@astrojs/starlight/props';
+
+const { entry } = Astro.props;
+const { data } = entry;
+
+const siteUrl = 'https://cgiar-climate-data-hub.github.io/wikis';
+const canonical = Astro.site
+  ? new URL(Astro.url.pathname, Astro.site).href
+  : `${siteUrl}/${entry.id}/`;
+
+const publisher = {
+  '@type': 'Organization',
+  name: 'CGIAR Climate Data Hub',
+  url: 'https://cgiar-climate-data-hub.github.io/wikis/',
+};
+
+const authors =
+  data.authors && data.authors.length > 0
+    ? data.authors.map((a: { name: string; affiliation?: string }) => ({
+        '@type': 'Person',
+        name: a.name,
+        ...(a.affiliation
+          ? { affiliation: { '@type': 'Organization', name: a.affiliation } }
+          : {}),
+      }))
+    : publisher;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: data.title,
+  ...(data.description ? { description: data.description } : {}),
+  url: canonical,
+  inLanguage: 'en',
+  publisher,
+  author: authors,
+  ...(data.version ? { version: data.version } : {}),
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'CGIAR Climate Data Hub — Wikis',
+    url: `${siteUrl}/`,
+  },
+};
+---
+
+<Default {...Astro.props} />
+<script type="application/ld+json" set:html={JSON.stringify(schema, null, 0)} />

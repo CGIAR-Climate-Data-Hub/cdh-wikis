@@ -37,6 +37,11 @@ export default defineConfig({
         alt: 'CGIAR Climate Action',
       },
 
+      // Override Starlight's Head component to inject schema.org JSON-LD.
+      components: {
+        Head: './src/components/Head.astro',
+      },
+
       // Edit-on-GitHub link in each page footer.
       editLink: {
         baseUrl:
@@ -121,6 +126,16 @@ export default defineConfig({
               label: "What's next — CMIP7 + CORDEX",
               slug: 'aaa-atlas/future-projections',
               badge: { text: 'draft', variant: 'caution' },
+            },
+            {
+              label: 'CMIP7 — downscaling infrastructure',
+              slug: 'aaa-atlas/cmip7-downscaling-infrastructure',
+              badge: { text: 'scaffold', variant: 'caution' },
+            },
+            {
+              label: 'CMIP7 — hazards pipeline',
+              slug: 'aaa-atlas/cmip7-hazards-pipeline',
+              badge: { text: 'scaffold', variant: 'caution' },
             },
             {
               label: 'Voices from the field',
