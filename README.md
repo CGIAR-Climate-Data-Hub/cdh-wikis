@@ -2,7 +2,7 @@
 
 Staging and publishing area for partner-facing knowledge wikis from the CGIAR Climate Data Hub community.
 
-**Live site**: https://cgiar-climate-data-hub.github.io/wikis/
+**Live site**: https://cgiar-climate-data-hub.github.io/cdh-wikis/
 
 ## What this is
 
